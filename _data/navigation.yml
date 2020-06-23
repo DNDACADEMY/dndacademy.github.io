@@ -3,7 +3,3 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "About"
-    url: /about/
-  - title: "연도별 포스트"
-    url: /posts/
