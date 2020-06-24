@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  " Culinary Arts in Europe by Jean Anthelme Brillat-Savarin"
-author: sal
-categories: [ Lifestyle ]
+title: " Culinary Arts in Europe by Jean Anthelme Brillat-Savarin"
+author: DnD
+categories: [Lifestyle]
 image: assets/images/7.jpg
 ---
+
 The origins of culinary began with primitive humans roughly 2 million years ago. There are various theories as to how early humans used fire to cook meat. According to anthropologist Richard Wrangham, author of Catching Fire: How Cooking Made Us Human, primitive humans simply tossed a raw hunk of meat into the flames and watched it sizzle. Another theory claims humans may first have savoured roasted meat by chance when the flesh of a beast killed in a forest fire was found to be more appetizing and easier to chew and digest than the conventional raw meat.
 
 Culinary techniques improved with the introduction of earthenware and stoneware, the domestication of livestock, and advancements in agriculture. In early civilizations, the primary employers of professional chefs were kings, aristocrats, or priests. The divide between professional chefs cooking for the wealthy and peasants cooking for their families engendered the development of many cuisines.
