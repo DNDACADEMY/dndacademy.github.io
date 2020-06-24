@@ -4,6 +4,7 @@ title: "D&D"
 description: "프로젝트에 즐거움을, 모두에게 기회를!"
 logo: "assets/images/logo.png"
 favicon: "assets/images/logo.png"
+og_image: "assets/images/meta.png"
 # baseurl: /jekyll-theme-memoirs
 google_analytics: "UA-xxxxxxxx-1"
 disqus: "demowebsite"
@@ -20,7 +21,7 @@ authors:
     gravatar: e56154546cf4be74e393c62d1ae9f9d4
     email: sgd0947@gmail.com
     web: https://dnd.ac/
-    description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
+    description: "프로젝트에 즐거움을, 모두에게 기회를!"
 
 # Plugins
 plugins:
