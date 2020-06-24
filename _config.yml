@@ -119,21 +119,21 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Email"
+    - label: ""
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:sgn8369@gmail.com"
-    - label: "Facebook"
+    - label: ""
       icon: "fab fa-fw fa-facebook-square"
       url: "https://www.facebook.com/DNDACADEMY/"
-    - label: "GitHub"
+    - label: ""
       icon: "fab fa-fw fa-github"
       url: "https://github.com/DNDACADEMY"
-    - label: "LinkedIn"
+    - label: ""
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/company/dndacademy"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://dnd.ac/"
+    # - label: "Website"
+    #   icon: "fas fa-fw fa-link"
+    #   url: "https://dnd.ac/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url:
