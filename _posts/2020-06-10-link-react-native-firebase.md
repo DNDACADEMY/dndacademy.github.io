@@ -8,8 +8,6 @@ image: assets/images/3.jpg
 # rating: 4.5
 ---
 
-# Firebase
-
 [React Native 개발 도전 - 생성된 프로젝트에 Firebase 연동하기 (2)](http://cheonbrave.blogspot.com/2018/04/react-native-firebase-2.html)
 
 - 1. ios 파이어베이스 연동

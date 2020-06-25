@@ -8,10 +8,6 @@ image: assets/images/3.jpg
 # rating: 4.5
 ---
 
-# React-Native 초기 세팅
-
-React Native 초기 세팅 문서입니다.
-
 공식문서 Getting Started의 Xcode & CocoaPods 단계까지 설정한 후 진행하시면 됩니다.
 
 [Getting Started · React Native](https://facebook.github.io/react-native/docs/getting-started)
