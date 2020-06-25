@@ -15,13 +15,96 @@ email: sgd0947@gmail.com
 
 # Authors
 authors:
-  DnD:
-    name: D&D
-    display_name: D&D
-    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+  Gidong:
+    name: 성기동
+    display_name: 성기동
+    gravatar: SeongGiDong.png
     email: sgd0947@gmail.com
     web: https://dnd.ac/
-    description: "프로젝트에 즐거움을, 모두에게 기회를!"
+  Huigu:
+    name: 권희구
+    display_name: 권희구
+    gravatar: GwonHuigu.png
+    email: project@heeguchi.me
+    web: https://dnd.ac/
+  Dayeong:
+    name: 정다영
+    display_name: 정다영
+    gravatar: JeongDayeong.png
+    email: danadayoung@gmail.com
+    web: https://dnd.ac/
+  Giyeol:
+    name: 정기열
+    display_name: 정기열
+    gravatar: JeongGiyeol.png
+    email: wjdrlduf12@gmail.com
+    web: https://dnd.ac/
+  Hansol:
+    name: 김한솔
+    display_name: 김한솔
+    gravatar: KimHansol.png
+    email: axscdv0@gmail.com
+    web: https://dnd.ac/
+  Jeongdong:
+    name: 김정동
+    display_name: 김정동
+    gravatar: KimJeongdong.png
+    email: kmtc241@gmail.com
+    web: https://dnd.ac/
+  Seongjun:
+    name: 김성준
+    display_name: 김성준
+    gravatar: KimSeongjun.png
+    email: tthh617@gmail.com
+    web: https://dnd.ac/
+  Dajeong:
+    name: 이다정
+    display_name: 이다정
+    gravatar: LeeDajeong.png
+    email: dadal2e@gmail.com
+    web: https://dnd.ac/
+  Hojun:
+    name: 이호준
+    display_name: 이호준
+    gravatar: LeeHojun.png
+    email: relativity1915@gmail.com
+    web: https://dnd.ac/
+  Yeongho:
+    name: 박영호
+    display_name: 박영호
+    gravatar: ParkYeongho.png
+    email: mellonia.bluerose@gmail.com
+    web: https://dnd.ac/
+  Hyeongon:
+    name: 손현곤
+    display_name: 손현곤
+    gravatar: SonHyeongon.png
+    email: sgn8369@gmail.com
+    web: https://dnd.ac/
+  Yeongwon:
+    name: 서영원
+    display_name: 서영원
+    gravatar: SuhYeongwon.png
+    email: jazz9008@gmail.com
+    web: https://dnd.ac/
+  Jongseong:
+    name: 우종성
+    display_name: 우종성
+    gravatar: WooJongseong.png
+    email: rura6502@hotmail.com
+    web: https://dnd.ac/
+  Yunji:
+    name: 우윤지
+    display_name: 우윤지
+    gravatar: WooYunji.png
+    email: younjiwoo@gmail.com
+    web: https://dnd.ac/
+  Seonju:
+    name: 여선주
+    display_name: 여선주
+    gravatar: YoeSeonju.png
+    email: sj6090@gmail.com
+    web: https://dnd.ac/
 
 # Plugins
 plugins:
