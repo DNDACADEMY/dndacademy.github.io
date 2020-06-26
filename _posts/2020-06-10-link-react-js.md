@@ -4,7 +4,7 @@ title: "React Hooks와 Context를 이용한 설계 패턴"
 author: Gidong
 categories: [Tech]
 tags: [Developer, React.JS]
-image: assets/images/3.jpg
+image: assets/images/reactjs/reacthooks.jpeg
 # rating: 4.5
 ---
 

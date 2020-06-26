@@ -4,7 +4,7 @@ title: "Spring 과 Spring Boot"
 author: Gidong
 categories: [Tech]
 tags: [Developer, Spring, Spring Boot]
-image: assets/images/3.jpg
+image: assets/images/spring/spring.jpeg
 # rating: 4.5
 ---
 

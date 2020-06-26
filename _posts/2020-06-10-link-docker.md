@@ -4,7 +4,7 @@ title: " Docker Container란?"
 author: Gidong
 categories: [Tech]
 tags: [Developer, Docker]
-image: assets/images/3.jpg
+image: assets/images/docker/docker-corver.png
 # rating: 4.5
 ---
 

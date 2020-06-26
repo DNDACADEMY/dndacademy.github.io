@@ -4,7 +4,7 @@ title: "React-Native 초기 세팅"
 author: Gidong
 categories: [Tech]
 tags: [Developer, React Native]
-image: assets/images/3.jpg
+image: assets/images/react-native/reactnative2.jpeg
 # rating: 4.5
 ---
 
