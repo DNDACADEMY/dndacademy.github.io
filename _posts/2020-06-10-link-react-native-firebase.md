@@ -6,6 +6,9 @@ categories: [Tech]
 tags: [Developer, React Native, Firebase]
 image: assets/images/react-native/reactnative.jpg
 # rating: 4.5
+sitemap:
+  changefreq: weekly
+  priority: 1.0
 ---
 
 [React Native 개발 도전 - 생성된 프로젝트에 Firebase 연동하기 (2)](http://cheonbrave.blogspot.com/2018/04/react-native-firebase-2.html)

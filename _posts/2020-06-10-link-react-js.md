@@ -6,6 +6,9 @@ categories: [Tech]
 tags: [Developer, React.JS]
 image: assets/images/reactjs/reacthooks.jpeg
 # rating: 4.5
+sitemap:
+  changefreq: weekly
+  priority: 1.0
 ---
 
 당신이 React를 즐겨 쓰는 사람이라면 끊임없이 변화하는 이 변덕스러운 도구를 감당하지 못했던 적도 있을 것이다. [Fiber(v16.0)](https://tech.wanted.co.kr/frontend/2018/01/07/react-fiber.html)가 등장한 게 2017년 겨울이었는데 어느 새 최근 8월 8일 [v16.9](https://github.com/facebook/react/releases/tag/v16.9.0) 정식 버전이 릴리즈되었다. 2년 사이에 React는 거의 모든 것이 바뀌었다. 렌더링 방식뿐만 아니라 패러다임 자체가 클래스형 컴포넌트에서 함수형 컴포넌트로 넘어갔다. 라이프사이클의 각 시점마다 유저가 개입하던 방식에서 Hooks를 이용해 상태 변수의 레퍼런스 변화를 추적하는 방식을 사용하게 되었다. 변화가 너무 빨랐던 탓일까? 여전히 대중들은 새 인터페이스에 적응하지 못한 듯하다. 시중에 유통되는 서적이나 튜토리얼 영상 대부분이 Redux를 중심으로 클래스형 컴포넌트를 구축하는 예전 패턴을 벗어나지 못하고 있는 걸로 보인다.

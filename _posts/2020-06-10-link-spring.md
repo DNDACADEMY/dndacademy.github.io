@@ -6,6 +6,9 @@ categories: [Tech]
 tags: [Developer, Spring, Spring Boot]
 image: assets/images/spring/spring.jpeg
 # rating: 4.5
+sitemap:
+  changefreq: weekly
+  priority: 1.0
 ---
 
 웹 애플리케이션 서버를 만들 때 스프링을 이용하는게 가장 일반적일만큼 대한민국 개발자의 스프링 의존도는 상당하다. 요즘에는 Node.js 나 Django 로도 많이 개발을 하지만 가장 익숙한건 아무래도 스프링인 듯 하다. 이번 포스트에서는 스프링이 정확히 어떤 것인지 그리고 스프링 부트와 어떤 차이가 있는지 알아보고자 한다.

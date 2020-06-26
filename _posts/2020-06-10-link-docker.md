@@ -6,6 +6,9 @@ categories: [Tech]
 tags: [Developer, Docker]
 image: assets/images/docker/docker-corver.png
 # rating: 4.5
+sitemap:
+  changefreq: weekly
+  priority: 1.0
 ---
 
 > [Container](https://cloud.google.com/containers/?hl=ko)란 어플리케이션이 동작하기 위해서 필요한 요소(실행 파일, 어플리케이션 엔진 등)을 패키지화하고 격리하는 기술

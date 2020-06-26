@@ -6,6 +6,9 @@ categories: [Tech]
 tags: [Developer, React Native]
 image: assets/images/react-native/reactnative2.jpeg
 # rating: 4.5
+sitemap:
+  changefreq: weekly
+  priority: 1.0
 ---
 
 공식문서 Getting Started의 Xcode & CocoaPods 단계까지 설정한 후 진행하시면 됩니다.
