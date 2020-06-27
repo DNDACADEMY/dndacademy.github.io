@@ -46,7 +46,6 @@ ga('send', 'pageview');
 
 <!-- Begin Sidebar Navigation
 ================================================== -->
-{% if page.url != '/latest' %}
 <div class="sidebar">    
 </div>   
 <div class="nav-icon">
@@ -66,8 +65,6 @@ ga('send', 'pageview');
 </nav>
 
 {% include search-lunr.html %}
-
-{% endif %}
 <!-- End Sidebar Navigation
 ================================================== -->
 
@@ -77,11 +74,9 @@ ga('send', 'pageview');
 
     <!-- Site Logo/Name
     ================================================== -->
-   {% if page.url != '/latest' %}
     <a class="navbar-brand" href="{{ site.baseurl }}/">
         <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
     </a>  
-   {% endif %}
 
     <!-- Site Tag
     ================================================== -->
@@ -115,7 +110,6 @@ ga('send', 'pageview');
 
 <!-- Begin Footer
 ================================================== -->
-{% if page.url != '/latest' %}
 <footer class="footer">
     <div class="container">
         <div class="row">
@@ -128,7 +122,6 @@ ga('send', 'pageview');
         </div>
     </div>
 </footer>
-{% endif %}
 <!-- End Footer
 ================================================== -->
 
