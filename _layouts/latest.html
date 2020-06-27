@@ -1,0 +1,13 @@
+---
+title: "최신글"
+layout: default
+permalink: "/latest.html"
+---
+
+{% assign counter = 0 %}
+<div class="blog-grid-container">
+    {% for i in (0...2)%}
+        {% assign post = site.posts[i] %}
+        {% include postbox.html %}
+    {% endfor %} 
+</div>
