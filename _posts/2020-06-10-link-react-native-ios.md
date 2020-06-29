@@ -33,7 +33,7 @@ react-native run-ios
 
 시뮬레이터에 정상적인 화면이 나온다면 bundle server와 시뮬레이터를 끄고 다시 진행합니다.
 
-![/assets/images/react-native/_2020-02-21__3.01.09.png](/assets/images/react-native/_2020-02-21__3.01.09.png)
+![/assets/images/react-native/2020-02-21__3.01.09.png](/assets/images/react-native/2020-02-21__3.01.09.png)
 
 프로젝트 구조는 위와 같이 구성합니다.
 
