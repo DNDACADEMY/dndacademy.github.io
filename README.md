@@ -1,3 +1,4 @@
+[![Coverage Status](https://coveralls.io/repos/github/DNDACADEMY/dndacademy.github.io/badge.svg?branch=master)](https://coveralls.io/github/DNDACADEMY/dndacademy.github.io?branch=master)
 [![HitCount](http://hits.dwyl.com/DNDACADEMY/dndacademygithubio.svg)](http://hits.dwyl.com/DNDACADEMY/dndacademygithubio)
 
 # dndacademy.github.io - (Memoirs Jekyll Theme)
