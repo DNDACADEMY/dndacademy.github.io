@@ -6,7 +6,7 @@ categories: [Github]
 tags: [Slack, Project Management]
 image: assets/images/slack/integration-slack.png
 sitemap:
-  changefreq: weekly
+  changefreq: daily
   priority: 1.0
 ---
 

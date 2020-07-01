@@ -7,7 +7,7 @@ tags: [Developer, React Native, Firebase]
 image: assets/images/react-native/reactnative.jpg
 # rating: 4.5
 sitemap:
-  changefreq: weekly
+  changefreq: daily
   priority: 1.0
 ---
 

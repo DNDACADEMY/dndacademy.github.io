@@ -7,7 +7,7 @@ tags: [Branding, Design, Collaboration, 브랜딩]
 image: assets/images/blog/design/DD_moving_image_ver.2.gif
 rating: 4.5
 sitemap:
-  changefreq: weekly
+  changefreq: daily
   priority: 1.0
 ---
 

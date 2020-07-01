@@ -7,7 +7,7 @@ tags: [Developer, Docker]
 image: assets/images/docker/docker-corver.png
 # rating: 4.5
 sitemap:
-  changefreq: weekly
+  changefreq: daily
   priority: 1.0
 ---
 

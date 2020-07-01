@@ -6,7 +6,7 @@ categories: [Github]
 tags: [ZenHub, Project Management]
 image: assets/images/background/3.jpg
 sitemap:
-  changefreq: weekly
+  changefreq: daily
   priority: 1.0
 ---
 

@@ -7,7 +7,7 @@ tags: [Developer, Spring, Spring Boot]
 image: assets/images/spring/spring.jpeg
 # rating: 4.5
 sitemap:
-  changefreq: weekly
+  changefreq: daily
   priority: 1.0
 ---
 

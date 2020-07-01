@@ -6,7 +6,7 @@ categories: [Github]
 tags: [Jekyll]
 image: assets/images/jekyll_memoirs/jekyll-logo.png
 sitemap:
-  changefreq: weekly
+  changefreq: daily
   priority: 1.0
 ---
 

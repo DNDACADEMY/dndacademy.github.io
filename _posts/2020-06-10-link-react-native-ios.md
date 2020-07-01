@@ -7,7 +7,7 @@ tags: [Developer, React Native]
 image: assets/images/react-native/reactnative2.jpeg
 # rating: 4.5
 sitemap:
-  changefreq: weekly
+  changefreq: daily
   priority: 1.0
 ---
 

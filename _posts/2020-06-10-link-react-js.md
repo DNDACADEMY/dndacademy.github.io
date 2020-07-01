@@ -7,7 +7,7 @@ tags: [Developer, React.JS]
 image: assets/images/reactjs/reacthooks.jpeg
 # rating: 4.5
 sitemap:
-  changefreq: weekly
+  changefreq: daily
   priority: 1.0
 ---
 
