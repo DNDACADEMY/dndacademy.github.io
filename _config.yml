@@ -2,9 +2,9 @@
 name: "DND 기술 블로그"
 title: "D&D"
 description: "프로젝트에 즐거움을, 모두에게 기회를!"
-logo: "assets/images/logo.png"
-favicon: "assets/images/logo.png"
-og_image: "assets/images/meta.png"
+logo: "assets/images/logo/logo.png"
+favicon: "assets/images/logo/logo.png"
+og_image: "assets/images/logo/meta.png"
 # baseurl: /jekyll-theme-memoirs
 google_analytics: "UA-167083100-1"
 disqus: "demowebsite"

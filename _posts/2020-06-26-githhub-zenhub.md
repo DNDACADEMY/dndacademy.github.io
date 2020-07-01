@@ -4,7 +4,7 @@ title: "Github로 프로젝트 관리하기 - ZenHub 사용법"
 author: Gidong
 categories: [Github]
 tags: [ZenHub, Project Management]
-image: assets/images/3.jpg
+image: assets/images/background/3.jpg
 sitemap:
   changefreq: weekly
   priority: 1.0
