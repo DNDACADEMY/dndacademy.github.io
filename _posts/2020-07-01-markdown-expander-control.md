@@ -24,7 +24,14 @@ sitemap:
 <details>
   <summary>접기/펼치기 버튼</summary>
   <div markdown="1">
-    |제목|내용| |--|--| |1|1| |2|10|
+    내용
   </div>
 </details>
 ```
+
+<details>
+  <summary>접기/펼치기 버튼</summary>
+  <div markdown="1">
+    내용
+  </div>
+</details>
