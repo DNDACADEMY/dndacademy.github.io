@@ -16,10 +16,10 @@ Github를 이용해서 Project Management 하는 방법 및 전체적인 프로�
 
 ## ZenHub 사용법
 
-![/assets/images/zenhub/F5c78MC.png](/assets/images/zenhub/F5c78MC.png)
+![/assets/images/githhub-zenhub/F5c78MC.png](/assets/images/githhub-zenhub/F5c78MC.png)
 
 수 많은 이슈들이 발급되면 그것을 한눈에 보는 것은 기존 UI에서는 어렵습니다. 이런 문제를 칸반보드 형식으로 해결해주는 것이 ZenHub 입니다.
-![/assets/images/zenhub/zenhub-task-board.png](/assets/images/zenhub/zenhub-task-board.png)
+![/assets/images/githhub-zenhub/zenhub-task-board.png](/assets/images/githhub-zenhub/zenhub-task-board.png)
 
 Public Repository를 이용 중이라면 무료로 사용 가능합니다. Private Repository는 비용을 지급하셔 야합니다.
 
@@ -29,7 +29,7 @@ Public Repository를 이용 중이라면 무료로 사용 가능합니다. Priva
 
 ### 기본 칸반보드
 
-![/assets/images/zenhub/GvP6XPh.png](/assets/images/zenhub/GvP6XPh.png)
+![/assets/images/githhub-zenhub/GvP6XPh.png](/assets/images/githhub-zenhub/GvP6XPh.png)
 
 기본적인 구조는 New Issue, Icebox, Backlog, In Progress, Review/QA, Done을 갖습니다. 각자 본인의 프로젝트와 성향에 맞게 사용하시면 됩니다.
 
@@ -39,36 +39,36 @@ Public Repository를 이용 중이라면 무료로 사용 가능합니다. Priva
 
 ### Milestone 적극 활용
 
-![/assets/images/zenhub/3lDuAxi.png](/assets/images/zenhub/3lDuAxi.png)
+![/assets/images/githhub-zenhub/3lDuAxi.png](/assets/images/githhub-zenhub/3lDuAxi.png)
 
 ZenHub 사용과 직접적인 기능은 아니지만, Milestone 여러 항목을 만들고 대부분 Icebox에 있는 issue가 아니라면 적절한 Milestone에 위치시키는 것을 권장합니다. 전체적인 작업에 진행 척도를 가시적으로 확인하기 좋은 점, 해당 Milestone(버전)에 추가되는 기능, 강화되는 기능, 수정된 버그 등을 직관적이로 표시 할 수 있습니다. 또 전체 Milestone 진척도를 알 수 있어 남은 시간도 산출하기 좋은 장점이 있습니다.
 
 ### Epic 적극 활용
 
-![/assets/images/zenhub/dZhrATb.png](/assets/images/zenhub/dZhrATb.png)
+![/assets/images/githhub-zenhub/dZhrATb.png](/assets/images/githhub-zenhub/dZhrATb.png)
 
 Epic은 Milestone과 비슷하게 이해하시면 됩니다. 큰 작업(Issue)이 있다면 그 작업(Issue)을 여러 Issue로 등록하고 한 묶음으로 관리하는 것입니다.
 
 Milestone의 장점처럼 작업에 대한 진척도를 가시적으로 표시하는 장점이 있습니다. 또 큰 작업물에 대한 작업은 여러 개발자가 나누어서 하다 보니 내가 그 기능을 작업하기 전에 선행적으로 진행되어야 하는 작업도 있을 수 있습니다. 이런 것들을 대한 피드백을 Epic을 이용하면 관리하기 편합니다.
-![/assets/images/zenhub/nIMGciB.png](/assets/images/zenhub/nIMGciB.png)
+![/assets/images/githhub-zenhub/nIMGciB.png](/assets/images/githhub-zenhub/nIMGciB.png)
 
 해당 Issue를 Epic으로 등록 시킬 경우 Create an epic 버튼을 클릭하면 됩니다.
-![/assets/images/zenhub/lN2uziy.png](/assets/images/zenhub/lN2uziy.png)
+![/assets/images/githhub-zenhub/lN2uziy.png](/assets/images/githhub-zenhub/lN2uziy.png)
 
 Issue를 등록할 때 오른쪽 하단의 Epic에서 등록시킬 수 있습니다.
 
 ### Issue 연결
 
-![/assets/images/zenhub/XYa3My3.png](/assets/images/zenhub/XYa3My3.png)
+![/assets/images/githhub-zenhub/XYa3My3.png](/assets/images/githhub-zenhub/XYa3My3.png)
 
 Connect with an issue 기능을 통해서 이슈끼리 연결을 할 수 있습니다. 위처럼 Pull Request를 할 때 아주 유용하게 사용할 수 있습니다.
-![/assets/images/zenhub/DPrWlUd.png](/assets/images/zenhub/DPrWlUd.png)
+![/assets/images/githhub-zenhub/DPrWlUd.png](/assets/images/githhub-zenhub/DPrWlUd.png)
 
 Issue 13과 해당 이슈를 작업해서 Pull Request Issue 17 번이 ZenHub 보드에서 연결돼 있는 것을 확인 할 수 있습니다. 이처럼 연관된 작업을 묶어주는 장점이 있습니다.
 
 ### Filter 기능
 
-![/assets/images/zenhub/4pZEYsB.png](/assets/images/zenhub/4pZEYsB.png)
+![/assets/images/githhub-zenhub/4pZEYsB.png](/assets/images/githhub-zenhub/4pZEYsB.png)
 
 다양한 Filter 기능을 제공합니다. Label, Assignee, Milestone, Repo 등등이 있습니다. 해당 기능은 직관적이니
 

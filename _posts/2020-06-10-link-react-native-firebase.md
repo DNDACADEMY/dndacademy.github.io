@@ -4,7 +4,7 @@ title: "React Native - Firebase"
 author: Gidong
 categories: [Tech]
 tags: [Developer, React Native, Firebase]
-image: assets/images/react-native/reactnative.jpg
+image: assets/images/link-react-native-firebase/reactnative.jpg
 # rating: 4.5
 sitemap:
   changefreq: daily
