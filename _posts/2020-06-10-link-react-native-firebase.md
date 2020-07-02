@@ -2,8 +2,8 @@
 layout: post
 title: "React Native - Firebase"
 author: Gidong
-categories: [Tech]
-tags: [Developer, React Native, Firebase]
+categories: [React Native]
+tags: [Developer, Firebase]
 image: assets/images/link-react-native-firebase/reactnative.jpg
 # rating: 4.5
 sitemap:

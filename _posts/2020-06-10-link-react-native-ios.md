@@ -2,8 +2,8 @@
 layout: post
 title: "React-Native 초기 세팅"
 author: Gidong
-categories: [Tech]
-tags: [Developer, React Native]
+categories: [React Native]
+tags: [Developer]
 image: assets/images/link-react-native-ios/reactnative2.jpeg
 # rating: 4.5
 sitemap:

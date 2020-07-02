@@ -2,8 +2,8 @@
 layout: post
 title: "Spring 과 Spring Boot"
 author: Gidong
-categories: [Tech]
-tags: [Developer, Spring, Spring Boot]
+categories: [Spring]
+tags: [Developer, Spring Boot]
 image: assets/images/link-spring/spring.jpeg
 # rating: 4.5
 sitemap:

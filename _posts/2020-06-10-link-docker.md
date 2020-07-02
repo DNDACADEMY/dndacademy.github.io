@@ -2,8 +2,8 @@
 layout: post
 title: " Docker Container란?"
 author: Gidong
-categories: [Tech]
-tags: [Developer, Docker]
+categories: [Docker]
+tags: [Developer, Docker Container]
 image: assets/images/link-docker/docker-corver.png
 # rating: 4.5
 sitemap:
