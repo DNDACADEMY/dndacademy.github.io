@@ -4,7 +4,7 @@ title: "Dockerfile 알아보기"
 author: Gidong
 categories: [Docker]
 tags: [Docker Compose, Dockerfile]
-image: assets/images/development-docker-compose/docker-compose-main.webp
+image: assets/images/development-docker-compose/docker-compose-main-cover.jpg
 sitemap:
   changefreq: daily
   priority: 1.0
