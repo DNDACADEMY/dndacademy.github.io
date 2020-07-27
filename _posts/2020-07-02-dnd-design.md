@@ -144,7 +144,7 @@ D&D는 Developer & Designer의 약자로 개발자와 디자이너가 모여 사
 
 ## Typography
 
-타이포그래피에서는 D&D의 원활한 커뮤니케이션을 위해 국문을 '스포카 한 산스'로, 영문을 'Sen'으로 설정하였습니다.
+타이포그래피에서는 D&D의 원활한 커뮤니케이션을 위해 국문을 'Noto Sans'로, 영문을 'Sen'으로 설정하였습니다.
 
 ![/assets/images/dnd-design/DD_text_image-13.jpg](/assets/images/dnd-design/DD_text_image-13.jpg)
 
