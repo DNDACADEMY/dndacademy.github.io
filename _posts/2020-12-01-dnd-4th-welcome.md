@@ -4,7 +4,7 @@ title: "📢 D&D 4기 모집"
 author: Gidong
 categories: [D&D]
 tags: [시작, 모집, 4기]
-image: assets/images/dnd-4th-welcome/logo.png
+image: assets/images/dnd-4th-welcome/main.png
 sitemap:
   changefreq: daily
   priority: 1.0
@@ -22,4 +22,4 @@ sitemap:
 -   1월 2일 오리엔테이션
 
 ### ✨ 신청방법
-https://dnd.ac 홈페이지에서 '4기 지원하기' 버튼을 클릭하여 신청해주세요.
+[dnd.ac](https://dnd.ac) 홈페이지에서 '4기 지원하기' 버튼을 클릭하여 신청해주세요.
