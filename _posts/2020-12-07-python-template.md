@@ -26,31 +26,30 @@ Django 템플릿 언어는 Django 자체 템플릿 시스템입니다. Django 1.
 
 변수는 다음과 같이 {{ 와 }}로 묶여 있습니다.
 
-```django
-My first name is {{ first_name }}. My last name is {{ last_name }}.
+```python
+My first name is { { first_name } }. My last name is { { last_name } }.
 ```
+
 화면출력 ->
-```django
+
+```python
 My first name is John. My last name is Doe.
 ```
+
 ## 태그
 
 태그는 렌더링 과정에서 어떤 논리를 제공합니다.
 
 이 정의는 의도적으로 모호합니다. 예를 들어, 태그는 컨텐츠를 출력 할 수 있는 제어 구조로 작동합니다. "if"문 또는 "for"루프 데이터베이스에서 콘텐츠를 검색하거나 다른 템플릿 태그에 대한 액세스를 활성화 할 수 있습니다.
 
-태그는 다음과 같이 {%와 %}로 묶여 있습니다.
+태그는 다음과 같이 묶여 있습니다.
 
-```django
-{% csrf_token %}
+```python
+>>> { % cycle 'odd' 'even' %}
 ```
 
-```django
-{% cycle 'odd' 'even' %}
-```
-
-```django
-{% if user.is_authenticated %}Hello, {{ user.username }}.{% endif %}
+```python
+>>> { % if user.is_authenticated % }Hello, { { user.username } }.{ % endif % }
 ```
 
 ## 필터
@@ -59,24 +58,25 @@ My first name is John. My last name is Doe.
 
 다음과 같이 정의를 하였을 경우에 대해서 살펴보자.:
 
-```django
-{{ django|title }}
+```python
+>>> { { django|title } }
 ```
+
 **{'django': 'the web framework for perfectionists with deadlines'}**, <- 와 같이 변수가 넘어왔을 경우 아래와 같이 출력된다.
 
-```django
+```python
 The Web Framework For Perfectionists With Deadlines
 ```
 
 일부 필터는 인수가 존재합니다. (아래는 날짜에 대한 필터)
 
-```django
-{{ my_date|date:"Y-m-d" }}
+```python
+{ { my_date|date:"Y-m-d" } }
 ```
 
 ## 코멘트
 
 코멘트는 다음과 같이 입력합니다.
-```django
+```python
 {# this won't be rendered #}
 ```
