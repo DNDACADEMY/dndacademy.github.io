@@ -45,11 +45,11 @@ My first name is John. My last name is Doe.
 태그는 다음과 같이 묶여 있습니다.
 
 ```python
->>> { % cycle 'odd' 'even' %}
+{ % cycle 'odd' 'even' %}
 ```
 
 ```python
->>> { % if user.is_authenticated % }Hello, { { user.username } }.{ % endif % }
+{ % if user.is_authenticated % }Hello, { { user.username } }.{ % endif % }
 ```
 
 ## 필터
@@ -59,7 +59,7 @@ My first name is John. My last name is Doe.
 다음과 같이 정의를 하였을 경우에 대해서 살펴보자.:
 
 ```python
->>> { { django|title } }
+{ { django|title } }
 ```
 
 **{'django': 'the web framework for perfectionists with deadlines'}**, <- 와 같이 변수가 넘어왔을 경우 아래와 같이 출력된다.
