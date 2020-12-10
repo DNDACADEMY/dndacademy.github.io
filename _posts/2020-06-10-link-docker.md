@@ -74,7 +74,7 @@ Hypervisor는 Hardware resource 를 가상화 한다. Hypervisor 위에 올라
 
 ### Container의 동작 구조
 
-![/assets/images/link-docker/_2019-10-25__10.36.19.png](/assets/images/link-docker/_2019-10-25__10.36.19.png)
+![/assets/images/link-docker/image1.png](/assets/images/link-docker/image1.png)
 
 # Docker Networking
 
