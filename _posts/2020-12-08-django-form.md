@@ -2,9 +2,9 @@
 layout: post
 title: "Django 폼(form) 사용하기"
 author: Gidong
-categories: [python]
-tags: [Django, 파이썬, Form, Django]
-image: assets/images/python-form/main.jpg
+categories: [Django]
+tags: [python, 파이썬, Form, 장고]
+image: assets/images/django-form/main.jpg
 sitemap:
   changefreq: daily
   priority: 1.0

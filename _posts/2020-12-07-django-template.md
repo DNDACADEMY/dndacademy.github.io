@@ -2,9 +2,9 @@
 layout: post
 title: "Django 템플릿에 대해서 알아보자"
 author: Gidong
-categories: [python]
-tags: [Django, 파이썬, Template, 템플릿, Django]
-image: assets/images/python-template/main.png
+categories: [Django]
+tags: [파이썬, Template, 템플릿, python]
+image: assets/images/django-template/main.png
 sitemap:
   changefreq: daily
   priority: 1.0
@@ -20,7 +20,7 @@ Django 템플릿 언어는 Django 자체 템플릿 시스템입니다. Django 1.
 
 역사적인 이유로 템플릿 엔진의 일반 지원과 Django 템플릿 언어의 구현이 모두 django.template 네임 스페이스에 존재합니다.
 
-## 변수 
+## 변수
 
 변수는 문맥에서 값을 출력합니다. 이것은 키를 값에 매핑하는 dict 같은 개체입니다.
 
@@ -77,6 +77,7 @@ The Web Framework For Perfectionists With Deadlines
 ## 코멘트
 
 코멘트는 다음과 같이 입력합니다.
+
 ```python
 {# this won't be rendered #}
 ```

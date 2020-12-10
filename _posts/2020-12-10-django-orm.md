@@ -2,8 +2,8 @@
 layout: post
 title: "Django ORM"
 author: Gidong
-categories: [python]
-tags: [Django, 파이썬, ORM, Django]
+categories: [Django]
+tags: [python, 파이썬, Form, 장고]
 image: assets/images/django-orm/main.png
 sitemap:
   changefreq: daily
