@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Django] 클래스 기반 뷰(Class-Based Views) vs 함수 기반 뷰(Function-Based Views)"
+title: "Django 클래스 기반 뷰(Class-Based Views) vs 함수 기반 뷰(Function-Based Views)"
 author: Gidong
 categories: [Django]
 tags: [python, 파이썬, CBV, FBV, 장고]
