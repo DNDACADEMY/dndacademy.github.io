@@ -96,7 +96,7 @@ sitemap:
   ```
 
 ## 6. 텍스트필드 꾸미기
-- SwiftUI의 View 프로토콜을 상속하였는데 body가 없어서 에러가 뜨는 것이니, 텍스트필드를 위한 String Binding과, Placeholder, 그리고 텍스트 필드를 포함한 body를 선언해준다.
+- SwiftUI의 View 프로토콜을 채택하였는데 body가 없어서 에러가 뜨는 것이니, 텍스트필드를 위한 String Binding과, Placeholder, 그리고 텍스트 필드를 포함한 body를 선언해준다.
 - Placeholder를 원하지 않는 경우도 있을 수 있기 때문에, 초기화 parameter에서 초기 값을 선언해준다.
 - 그리고 휴대폰 번호 검증을 위한 flag 선언과 더불어 약간의 스타일링을 해주자.
 - 참고로 간단한 예제이므로 Regex를 이용하지 않고, 글자 수만 검증할 것이다.
