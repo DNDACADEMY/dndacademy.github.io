@@ -105,6 +105,12 @@ authors:
     gravatar: YoeSeonju.png
     email: sj6090@gmail.com
     web: https://dnd.ac/
+  Cheolwoo:
+    name: 이철우
+    display_name: 이철우
+    gravatar: LeeCheolwoo.png
+    email: aaronlab.net@gmail.com
+    web: https://github.com/aaronLab
 
 # Plugins
 plugins:
