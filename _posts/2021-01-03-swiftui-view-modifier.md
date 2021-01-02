@@ -74,7 +74,7 @@ sitemap:
 ## 5. 마치면서
 
 - 최근 SwiftUI로만 개발을 진행하면서 불편한 것도 많지만, 그 불편함에 비해 편한 것이 더 많다고 느끼고 있는 중이다.
-- 물론 WKWebView, Delegate Pattern 등을 사용해야 할 상황이 필요할 경우가 아직은 많기 때문에 UIKit에 대한 학습 또한 많이 필요한 것은 사실이고, 이에 대한 대응책으로 Apple이 Representable 프로토콜 및 Coordinator Instance를 만들어 두었으며, SiwftUI 버전으로 추가로 내놓지 않을 것으로 보이지만, SwiftUI로 개발을 하다 보면 UIKit에 대한 지식과 존재감을 잊어버릴 정도로 너무 편하게 사용하고 있다.
+- 물론 WKWebView, Delegate Pattern 등을 사용해야 할 상황이 필요할 경우가 아직은 많기 때문에 UIKit에 대한 학습 또한 많이 필요한 것은 사실이고, 이에 대한 대응책으로 Apple이 Representable 프로토콜 및 Coordinator Instance를 만들어 두었으며, 위 기능들을 SiwftUI 버전 업데이트를 통해 추가로 내놓지 않을 것으로 보이지만, SwiftUI로 개발을 하다 보면 UIKit에 대한 지식과 존재감을 잊어버릴 정도로 너무 편하게 사용하고 있다.
 - 더불어 스크롤뷰, Constraints, Auto Layout 등에 대한 코드의 양도 확실히 줄어들 뿐만 아니라 보기도 편해 졌다고 느끼고 있고, 짜증났던 Constraints에 대한 Conflict를 못 보게 되었다. 또한, 필수적으로 사용할 수 밖에 없었던 ViewController가 필요 없어지면서 확실한 MVVM 아키텍처 등의 적용이 가능해졌다고 생각한다.
 
 
