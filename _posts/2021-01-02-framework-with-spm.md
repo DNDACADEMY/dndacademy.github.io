@@ -64,7 +64,7 @@ sitemap:
   ```
 - SwiftUI를 이용할 것이기 때문에 SwiftUI를 import해준다.
 - SwiftPMExample 안에 TextFields의 구조체를 하나 더 선언해줄 예정인데, **TextFields.swift** 파일을 추가로 만들고, SwiftPMExample의 extension을 이용하여 TextField struct를 선언 후 초기화해준다. (물론 public)
-- 이후 해당 파일 최 하단에서 SwiftPMExample.TextFields의 extension을 선언 후 작업 할 예정이다.
+- 이후 해당 파일 하단에서 SwiftPMExample.TextFields의 extension을 선언 후 작업 할 예정이다.
 - 우선 에러가 발생하더라도 아래 처럼 작성 후 이후 단계로 진행한다.
 
   ```Swift
@@ -96,7 +96,7 @@ sitemap:
   ```
 
 ## 6. 텍스트필드 꾸미기
-- View를 상속하였는데 body가 없어서 에러가 뜨는 것이니, 텍스트필드를 위한 String Binding과, Placeholder, 그리고 텍스트 필드를 포함한 body를 선언해준다.
+- SwiftUI의 View 프로토콜을 채택하였는데 body가 없어서 에러가 뜨는 것이니, 텍스트필드를 위한 String Binding과, Placeholder, 그리고 텍스트 필드를 포함한 body를 선언해준다.
 - Placeholder를 원하지 않는 경우도 있을 수 있기 때문에, 초기화 parameter에서 초기 값을 선언해준다.
 - 그리고 휴대폰 번호 검증을 위한 flag 선언과 더불어 약간의 스타일링을 해주자.
 - 참고로 간단한 예제이므로 Regex를 이용하지 않고, 글자 수만 검증할 것이다.
@@ -146,10 +146,10 @@ sitemap:
 
 ## 7. 휴대폰 번호 포맷팅 및 검증하기
 
-- SwiftUI에서 선언형 프로그래밍의 도입으로 기존에 사용하던 delegate 패턴을 사용하지 않고, View Model 없이 View에서만 컨트롤을 하는 중이기 때문에, 간단하게 Combine Framework의 Just를 이용해서 입력 값을 제어해 볼 것이다.
-- Combine을 import해야하기 때문에 상단에 Combine을 import 해준다.
+- SwiftUI에서 선언형 프로그래밍의 도입으로 기존에 사용하던 delegate 패턴을 사용하지 않고, View Model 없이 View에서만 컨트롤 할 예정이기 때문에, 간단하게 Combine Framework의 Just를 이용해서 입력 값을 제어해 볼 것이다.
+- 상단에 Combine을 import 해준다.
 - 그 후, 앞서 만든 텍스트 overlay 다음에 onReceive를 이용하여 제어할 예정이기 때문에, 이후에 아래의 코드를 삽입해 주고 바디 밖에 **formatMobileNo**라는 메소드도 하나 선언해준다.
-- onReceive는 파라미터의 값이 변화할 때 마다 해당 클로저의 메소드를 실행시켜준다.
+- onReceive는 파라미터의 Publisher 값이 변화할 때 마다 해당 클로저의 메소드를 실행시켜준다. (해당 메소드의 자세한 내용은 [애플의 공식문서](https://developer.apple.com/documentation/swiftui/view/onreceive(_:perform:))를 참고해보자.)
   ```Swift
   public var body: some View {
     // ...
@@ -160,6 +160,7 @@ sitemap:
   ```
 
 - 간단한 검증과 더불어 포매팅을 아래의 메소드를 통해 할 수 있다. (물론 Regex를 이용하여 보다 더 정확한 검증을 구현할 수 있다.)
+- 또한, 클로저의 escaping 파라미터를 이용하여 함수형 프로그래밍으로 메소드를 만들어도 된다.
 
   ```Swift
   /// 텍스트 포맷팅 및 유효성 확인
@@ -199,8 +200,8 @@ sitemap:
 ## 8. 배포하기
 
 - 굳이 공개할 라이브러리가 아니라면 배포하지 않고 라이브러리를 다른 프로젝트에 끌어다 놓고 xcodeproj의 general에서 Framework에 추가해주면 된다.
-- 배포는 보통 GitHub를 이용하여 터미널을 이용하여 해당 패키지의 Root Directory로 이동 후 GitHub에 Repository를 생성 후 업로드한다.
-- Git 초기화가 되어있지 않다면 아래의 명령어를 참고하자.
+- 배포는 보통 GitHub를 이용하여 하고, 터미널을 이용하여 해당 패키지의 Root Directory로 이동 후 GitHub에 Repository를 생성 후 Push한다.
+- Git 초기화가 되어있지 않다면 아래의 명령어 또는 [깃허브의 공식문서](https://docs.github.com/en/free-pro-team@latest/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line)를 참고하자.
   ```bash
   git init
   git add .
