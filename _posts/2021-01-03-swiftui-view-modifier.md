@@ -3,7 +3,7 @@ layout: post
 title: "SwiftUI의 ViewModifier"
 author: Cheolwoo
 categories: [SwiftUI]
-tags: [IOS, Swift, SwiftUI]
+tags: [IOS, Swift]
 image: assets/images/swiftui-view-modifier/main.png
 sitemap:
   changefreq: daily

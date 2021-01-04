@@ -3,7 +3,7 @@ layout: post
 title: "Swift Package Manager를 통한 Theme Framework 만들기"
 author: Cheolwoo
 categories: [IOS]
-tags: [IOS, Swift, SwiftUI]
+tags: [Swift, SwiftUI]
 image: assets/images/framework-with-spm/main.png
 sitemap:
   changefreq: daily
