@@ -1,6 +1,5 @@
 # DND 기술블로그
 
-[![Coverage Status](https://coveralls.io/repos/github/DNDACADEMY/dndacademy.github.io/badge.svg?branch=master)](https://coveralls.io/github/DNDACADEMY/dndacademy.github.io?branch=master)
 [![Sponsors on Open Collective](https://opencollective.com/dnd/sponsors/badge.svg)](#sponsors)
 [![HitCount](http://hits.dwyl.com/DNDACADEMY/dndacademygithubio.svg)](http://hits.dwyl.com/DNDACADEMY/dndacademygithubio)
 
