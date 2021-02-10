@@ -17,7 +17,7 @@ D&D는 Developer & Designer의 줄임말로 개발자&디자이너 연합 동아
 
 💖 **Special Thanks**
 
-Brand Designer [하윤지](http://hayoonji.com/)
+Graphic Designer [하윤지](http://hayoonji.com/)
 
 Graphic Designer [심호철](https://www.instagram.com/simh57/)
 

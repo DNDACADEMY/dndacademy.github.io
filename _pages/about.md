@@ -27,7 +27,7 @@ imageshadow: true
 
 💖 **Special Thanks**
 
-Brand Designer [하윤지](http://hayoonji.com/)
+Graphic Designer [하윤지](http://hayoonji.com/)
 
 Graphic Designer [심호철](https://www.instagram.com/simh57/)
 
