@@ -1,11 +1,11 @@
 # Site
 name: "DND 기술 블로그"
 title: "D&D"
-description: "프로젝트에 즐거움을, 모두에게 기회를!"
+description: "개발자와 디자이너가 함께 사이드 프로젝트를 진행해요. D&D는 서울에서 활발히 활동하고 있는 현직자들이 서울에 편중되어 있는 기술공유와 세미나를 더 많은 사람들에게 나누기위해 기획된 비영리단체입니다. 모두가 지역의 한계를 벗어나 실무 프로젝트를 완료해보세요. 누구나 평등한 교육 기회를 가질 수 있습니다. tags: IT사이드프로젝트, 사이드프로젝트, dnd, d&d"
+site_description: "프로젝트에 즐거움을, 모두에게 기회를!"
 logo: "assets/images/logo/logo.png"
 favicon: "assets/images/logo/logo.png"
 og_image: "assets/images/logo/meta.png"
-# baseurl: /jekyll-theme-memoirs
 google_analytics: "UA-167083100-1"
 disqus: "demowebsite"
 mailchimp-list: "https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b"
