@@ -1,13 +1,16 @@
 ---
-layout: page
-title: D&D에서 5기를 모집합니다.
-permalink: /about
-comments: false
-image: assets/images/dnd-design/DD_moving_image_ver.2.gif
-imageshadow: true
+layout: post
+title: "📢 D&D 5기 모집"
+author: Gidong
+categories: [D&D]
+tags: [시작, 모집, 5기]
+image: assets/images/dnd-5th-recruited/main.png
+sitemap:
+  changefreq: daily
+  priority: 1.0
 ---
 
-> 개발자&디자이너 연합 동아리 D&D에서 올 여름 8주간 함께할 개발자 및 디자이너를 모집합니다.
+개발자&디자이너 연합 동아리 D&D에서 올 여름 8주간 함께할 개발자 및 디자이너를 모집합니다.
 
 ## 📌 D&D란?
 
