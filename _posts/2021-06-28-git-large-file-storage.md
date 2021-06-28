@@ -55,3 +55,11 @@ Homebrew: brew install git-lfs
 > ![/assets/images/git-large-file-storage/3.png](/assets/images/git-large-file-storage/3.png)
 >
 > 이제 .gitattributes을 통해서 파일 추적이 이루어질 것입니다.
+
+> ### 그럼에도 불구하고 에러가 발생하는 경우!
+>
+> ```CMD
+> git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch node_modules.zip'
+> ```
+>
+> 해당 파일의 캐쉬 삭제후 git add를 진행합니다.
