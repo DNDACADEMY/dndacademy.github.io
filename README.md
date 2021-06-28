@@ -1,10 +1,9 @@
 # DND 기술블로그
 
-[![Sponsors on Open Collective](https://opencollective.com/dnd/sponsors/badge.svg)](#sponsors)
-[![HitCount](http://hits.dwyl.com/DNDACADEMY/dndacademygithubio.svg)](http://hits.dwyl.com/DNDACADEMY/dndacademygithubio)
+[![Website Stats](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)](https://dndacademy.github.io) [![Feedback](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://dnd.channel.io/) ![Forks](https://img.shields.io/github/forks/DNDACADEMY/dndacademy.github.io.svg) ![Stars](https://img.shields.io/github/stars/DNDACADEMY/dndacademy.github.io.svg) ![Watchers](https://img.shields.io/github/watchers/DNDACADEMY/dndacademy.github.io.svg)
 
 - Copyright &copy; 2019-2021, [https://dndacademy.github.io/](https://dndacademy.github.io/)
-- Author: Gidong Seong
+- Author: [Gidong Seong](https://sgd122.github.io/)
 - Licensed under the terms of the MIT License.
 
 ## Settings
@@ -15,7 +14,3 @@ gem install bundler
 bundle install
 bundle exec jekyll serve --watch
 ```
-
-[Live Demo](https://wowthemesnet.github.io/jekyll-theme-memoirs/) | [Docs & Download](https://bootstrapstarter.com/bootstrap-templates/jekyll-theme-memoirs/) | [Buy me a coffee](https://www.wowthemes.net/donate/)
-
-![memoirs](https://bootstrapstarter.com/assets/img/themes/memoirs-jekyll.jpg)
