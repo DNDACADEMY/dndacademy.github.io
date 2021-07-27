@@ -2,7 +2,7 @@
 layout: post
 title: "3기 활동 마무리, 그 첫번째 이야기..."
 author: Gidong
-categories: [D&D]
+categories: [DND]
 tags: [마무리, 후기, 3기]
 image: assets/images/dnd-3rd-finish-1/logo.png
 sitemap:

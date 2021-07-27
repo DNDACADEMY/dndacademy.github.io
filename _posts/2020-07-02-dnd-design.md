@@ -2,7 +2,7 @@
 layout: post
 title: "디자이너들끼리 멋지게 협업하기"
 author: Dayeong
-categories: [D&D]
+categories: [DND]
 tags: [Branding, Design, Collaboration, 브랜딩]
 image: assets/images/dnd-design/DD_moving_image_ver.2.gif
 rating: 4.5

@@ -2,7 +2,7 @@
 layout: post
 title: "📢 D&D 5기 모집"
 author: Gidong
-categories: [D&D]
+categories: [DND]
 tags: [시작, 모집, 5기]
 image: assets/images/dnd-5th-recruited/main.png
 sitemap:
