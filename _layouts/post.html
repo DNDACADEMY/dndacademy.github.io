@@ -15,7 +15,7 @@ post_class: post-template
             {% if page.author and author.display_name %}
                 <!-- author을 작성하였으며, config에 존재할 경우 -->
                 <a target="_blank" class="text-dark" href="{{ author.web }}">
-                    <img class="author-thumb" src="https://dnd-academy.s3.ap-northeast-2.amazonaws.com/images/mentor/{{ author.gravatar }}?s=250&d=mm&r=x" alt="{{ author.display_name }}">
+                    <img class="author-thumb" src="https://dnd-academy-v2.s3.ap-northeast-2.amazonaws.com/images/mentor/{{ author.gravatar }}?s=250&d=mm&r=x" alt="{{ author.display_name }}">
                 </a>
             {% else %}
                 <!-- config에 존재하지 않는 사용자일 경우  -->
