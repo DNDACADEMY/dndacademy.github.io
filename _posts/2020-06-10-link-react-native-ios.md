@@ -29,11 +29,11 @@ cd test_rn
 react-native run-ios
 ```
 
-![/assets/images/link-react-native-ios/Untitled.png](/assets/images/link-react-native-ios/Untitled.png)
+![/assets/images/link-react-native-ios/Untitled.png](https://blog.dnd.ac/assets/images/link-react-native-ios/Untitled.png)
 
 시뮬레이터에 정상적인 화면이 나온다면 bundle server와 시뮬레이터를 끄고 다시 진행합니다.
 
-![/assets/images/link-react-native-ios/2020-02-21__3.01.09.png](/assets/images/link-react-native-ios/2020-02-21__3.01.09.png)
+![/assets/images/link-react-native-ios/2020-02-21__3.01.09.png](https://blog.dnd.ac/assets/images/link-react-native-ios/2020-02-21__3.01.09.png)
 
 프로젝트 구조는 위와 같이 구성합니다.
 
@@ -404,7 +404,7 @@ export default function Router() {
 
 실행하면 mobx props를 확인할 수 있습니다.
 
-![/assets/images/link-react-native-ios/Untitled%201.png](/assets/images/link-react-native-ios/Untitled%201.png)
+![/assets/images/link-react-native-ios/Untitled%201.png](https://blog.dnd.ac/assets/images/link-react-native-ios/Untitled%201.png)
 
 버튼을 누르면 user_name이 바뀌게 해보겠습니다.
 
@@ -417,7 +417,7 @@ export default function Router() {
 
 버튼을 누르면 확인할 수 있습니다.
 
-![/assets/images/link-react-native-ios/Untitled%202.png](/assets/images/link-react-native-ios/Untitled%202.png)
+![/assets/images/link-react-native-ios/Untitled%202.png](https://blog.dnd.ac/assets/images/link-react-native-ios/Untitled%202.png)
 
 소스는 아래 리포지토리에서 확인이 가능합니다.
 

@@ -74,7 +74,7 @@ Hypervisor는 Hardware resource 를 가상화 한다. Hypervisor 위에 올라
 
 ### Container의 동작 구조
 
-![/assets/images/link-docker/image1.png](/assets/images/link-docker/image1.png)
+![/assets/images/link-docker/image1.png](https://blog.dnd.ac/assets/images/link-docker/image1.png)
 
 # Docker Networking
 
@@ -172,7 +172,7 @@ $ sudo docker network inspect bridge
 
 Linux에서 도커를 실행중인 경우 tmpfs 마운트를 사용할 수도 있다.
 
-![/assets/images/link-docker/Untitled.png](/assets/images/link-docker/Untitled.png)
+![/assets/images/link-docker/Untitled.png](https://blog.dnd.ac/assets/images/link-docker/Untitled.png)
 
 **[볼륨(Volume)](https://docs.docker.com/v18.09/storage/volumes/)**은 도커가 관리하는 호스트 파일 시스템의 일부(Linux의 경우 /var/lib/docker/volumes/)에 저장된다.
 

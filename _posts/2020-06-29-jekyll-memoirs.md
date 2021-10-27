@@ -14,7 +14,7 @@ GitHub에서 새 저장소(repository)를 만듭니다.
 이 때 저장소의 이름을 자신의 username 뒤에 .github.io가 붙은 이름으로 짓습니다.
 이렇게 해야 yourname.github.io의 도메인으로 접속할 수 있는 블로그가 됩니다.
 
-![img01](/assets/images/jekyll_memoirs/jekyll.png)
+![img01](https://blog.dnd.ac/assets/images/jekyll_memoirs/jekyll.png)
 
 > 프로젝트 별 페이지 만들기
 >

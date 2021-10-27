@@ -52,7 +52,7 @@ return HttpResponse(content=user_list_json_array, content_type="application/json
 
 아래는 실제 호출시에 나타나는 로그이다.
 
-![image1](/assets/images/django-orm/image1.png)
+![image1](https://blog.dnd.ac/assets/images/django-orm/image1.png)
 
 ### 지연로딩 예제2)
 
@@ -84,7 +84,7 @@ def i_am_function_view2(request: WSGIRequest):
 
 Order QuerySet과 Company QuerySet을 선언했지만 사용하지 않아서 SQL이 호출되지 않는다.
 
-![image2](/assets/images/django-orm/image2.png)
+![image2](https://blog.dnd.ac/assets/images/django-orm/image2.png)
 
 ### 지연로딩 예제3)
 
@@ -116,7 +116,7 @@ def i_am_function_view2(request: WSGIRequest):
 user1명만 얻기위해 LIMIT1 옵션이 걸린 SQL을 호출한다.
 그 후에 모든 user목록을 얻기위해 다시 SQL을 호출한다.
 
-![image3](/assets/images/django-orm/image3.png)
+![image3](https://blog.dnd.ac/assets/images/django-orm/image3.png)
 
 ### 지연로딩 해결책
 
@@ -145,7 +145,7 @@ def i_am_function_view2(request: WSGIRequest):
 
 이 예제를 통해 배울점: 쿼리셋을 호출하는 순서가 바뀌는 것만으로도 QuerySet캐싱때문에 발생하는 SQL이 달라질 수 있다.
 
-![image4](/assets/images/django-orm/image4.png)
+![image4](https://blog.dnd.ac/assets/images/django-orm/image4.png)
 
 ### Eager Loading 즉시로딩 : N+1 Problem
 
@@ -175,7 +175,7 @@ def i_am_function_view2(request: WSGIRequest):
 
 이 경우, user.userinfo를 조회할때마다 sql이 계속 호출되는 문제가 발생한다.
 
-![image5](/assets/images/django-orm/image5.png)
+![image5](https://blog.dnd.ac/assets/images/django-orm/image5.png)
 
 N+1 Problem을 해결하기위해(==즉시로딩을 하기위해) Django는 select_related()와 prefetch_related() 라는 메서드를 제공한다.
 이 내용은 아래에서 좀 더 자세히 다룬다.
@@ -218,7 +218,7 @@ class QuerySet:
 
 QuerySet이 어떻게 동작하는지 알기위해서는 아래 구성요소만 알아도된다.
 
-![image6](/assets/images/django-orm/image6.png)
+![image6](https://blog.dnd.ac/assets/images/django-orm/image6.png)
 
 🌟🌟🌟**QuerySet은 1개의 쿼리와 0~N개의 추가쿼리(셋)로 구성되어있다.** 🌟🌟🌟
 
@@ -226,7 +226,7 @@ QuerySet이 어떻게 동작하는지 알기위해서는 아래 구성요소만 
 
 - prefetch_related()는 추가 쿼리셋이다.
 
-![image7](/assets/images/django-orm/image7.png)
+![image7](https://blog.dnd.ac/assets/images/django-orm/image7.png)
 
 ```django
 company_queryset: QuerySet = (Company.objects
@@ -295,7 +295,7 @@ queryset = (
 이 Queryset순서가 실제 SQL의 순서와 가장 유사하다.
 다른 건 몰라도 **.filter()** 문앞에 **prefetch_related()**를 두면 4-1과 같은 실수를 하기 쉽기 때문에 **prefetch_related()**는 **filter()** 뒤에 두는 것을 추천한다.
 
-![image8](/assets/images/django-orm/image8.png)
+![image8](https://blog.dnd.ac/assets/images/django-orm/image8.png)
 
 ## 마치며 QuerySet을 잘사용하는법
 

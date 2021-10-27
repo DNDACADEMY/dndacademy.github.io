@@ -15,12 +15,12 @@ sitemap:
 
 ## 터미널 환경 구성
 
-![/assets/images/settings-mac-terminal/1.png](/assets/images/settings-mac-terminal/1.png)
+![/assets/images/settings-mac-terminal/1.png](https://blog.dnd.ac/assets/images/settings-mac-terminal/1.png)
 
 여러분들이 별도의 환경설정을 하지 않았다면, 위의 사진과 비슷한 모습일 겁니다.
 하지만 이 글을 끝까지 따라한다면 아래와 같이 꾸밀 수 있을 것입니다.
 
-![/assets/images/settings-mac-terminal/2.png](/assets/images/settings-mac-terminal/2.png)
+![/assets/images/settings-mac-terminal/2.png](https://blog.dnd.ac/assets/images/settings-mac-terminal/2.png)
 
 ## 1. zsh 및 oh-my-zsh 설치하기
 
@@ -52,7 +52,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 쉘 이름은 `echo $0` 환경변수로 확인할 수 있습니다.  
 여러분의 터미널에 `zsh`가 출력되는지 확인해보자, 아래 그림처럼 `zsh`가 나오면 정상적으로 설치된 것입니다.
 
-![/assets/images/settings-mac-terminal/3.png](/assets/images/settings-mac-terminal/3.png)
+![/assets/images/settings-mac-terminal/3.png](https://blog.dnd.ac/assets/images/settings-mac-terminal/3.png)
 
 ## 2. Powerlevel9k 테마 설치
 
@@ -72,7 +72,7 @@ vi ~/.zshrc
 
 아래 그림처럼 ZSH_THEME 단락을 `powerlevel9k/powerlevel9k`로 바꿔줍니다. 아마 여러분의 .zshrc의 기본 ZSH_THEME는 `robbyrussell`로 잡혀있을 것입니다.
 
-![/assets/images/settings-mac-terminal/4.png](/assets/images/settings-mac-terminal/4.png)
+![/assets/images/settings-mac-terminal/4.png](https://blog.dnd.ac/assets/images/settings-mac-terminal/4.png)
 
 `.zshrc` 파일을 변경했다면, zsh 명령어를 통해 쉘을 다시 열어줘야 변경 사항이 확인이 가능합니다.
 
@@ -101,7 +101,7 @@ cd .. && rm -rf /tmp/powerlevel9k-fonts
 
 폰트 설치가 끝났으면 iTerm 설정을 통해 터미널 기본 폰트를 변경해주어야 한다. iTerm 화면에서 **Command + ,(콤마)** 단축키를 이용해 설정 창을 열어준다. 그 다음 **Profiles > Text 탭**의 Font 섹션 아래에 있는 `Change Font` 버튼을 클릭(혹은 폰트에 대한 select가 보입니다.)해주자.
 
-![/assets/images/settings-mac-terminal/5.png](/assets/images/settings-mac-terminal/5.png)
+![/assets/images/settings-mac-terminal/5.png](https://blog.dnd.ac/assets/images/settings-mac-terminal/5.png)
 
 `Meslo LG M DZ for Powerline` 폰트가 보인다. 그 폰트를 선택하고 글자 크기를 여러분이 원하는 크기로 세팅하고 창을 닫아준다. (필자는 12pt가 적당하다고 생각하지만, 넓은 화면을 가진 사용자의 경우 13pt가 가장 적절하다.)
 
@@ -118,11 +118,11 @@ mkdir -p ~/.iterm && curl https://raw.githubusercontent.com/mbadolato/iTerm2-Col
 
 위 명령어를 입력하여 Brogrammer 컬러 스킴을 여러분의 홈 디렉토리 .iterm 폴더안에 다운로드 하였다. 다운로드가 끝났다면 iTerm 화면에서 Command + ,(콤마) 단축키로 설정 화면을 열고 Profiles > Colors 탭의 우측하단의 Color Presets 콤보박스를 열어 `Import` 옵션을 선택하자. 이해가 잘 안간다면 아래 그림을 보자.
 
-![/assets/images/settings-mac-terminal/6.png](/assets/images/settings-mac-terminal/6.png)
+![/assets/images/settings-mac-terminal/6.png](https://blog.dnd.ac/assets/images/settings-mac-terminal/6.png)
 
 탐색기에서 Command + Shift + g 단축키를 입력하여 경로 입력 창을 열고 `~/.iterm` 을 입력하여 ~/.iterm 폴더로 이동한 후 .iterm 폴더 내에 있는 Brogrammer.itermcolors파일을 선택해주자.
 
-![/assets/images/settings-mac-terminal/7.png](/assets/images/settings-mac-terminal/7.png)
+![/assets/images/settings-mac-terminal/7.png](https://blog.dnd.ac/assets/images/settings-mac-terminal/7.png)
 
 Brogrammer를 선택하고, 설정 화면을 닫아주자. 설정이 정상적으로 되었다면 아래와 같이 컬러가 변경된 터미널을 확인할 수 있다.
 
@@ -141,14 +141,14 @@ EOF
 
 설정 파일을 변경하더라도 바로 적용이 안되고 zsh 쉘을 다시 실행해야 한다. zsh 명령어를 입력하여 zsh 쉘을 다시 실행하여 보자. 설정이 잘 완료 되었다면 아래와 같이 터미널이 조금 더 간략화된다.
 
-![/assets/images/settings-mac-terminal/8.png](/assets/images/settings-mac-terminal/8.png)
+![/assets/images/settings-mac-terminal/8.png](https://blog.dnd.ac/assets/images/settings-mac-terminal/8.png)
 
 ## 6. logo-ls 설치하기
 
 이제 터미널 셋팅의 최종장입니다.  
 여러분들의 터미널(iterm2)에서 **ls** 명령어를 입력하였을 때, 아래와 같이 logo가 함께 나올 수 있도록 하는 작업입니다.
 
-![/assets/images/settings-mac-terminal/9.png](/assets/images/settings-mac-terminal/9.png)
+![/assets/images/settings-mac-terminal/9.png](https://blog.dnd.ac/assets/images/settings-mac-terminal/9.png)
 
 [공식 github 바로가기](https://github.com/Yash-Handa/logo-ls)
 
@@ -179,7 +179,7 @@ alias lag='logo-ls -AD'
 alias llg='logo-ls -alD'
 ```
 
-![/assets/images/settings-mac-terminal/10.png](/assets/images/settings-mac-terminal/10.png)
+![/assets/images/settings-mac-terminal/10.png](https://blog.dnd.ac/assets/images/settings-mac-terminal/10.png)
 
 ### logo-ls에 맞는 font 적용
 
@@ -194,7 +194,7 @@ brew install --cask font-fira-mono-nerd-font
 
 설치를 완료한 후 iTerm 화면에서 **Command + ,(콤마)** 단축키를 이용해 설정 창을 열어준다. 그 다음 **Profiles > Text 탭**의 Font 섹션 아래에 있는 `Change Font` 버튼을 클릭(혹은 폰트에 대한 select가 보입니다.) 하여 **FiraMono Nerd Font**를 적용해줍니다.
 
-![/assets/images/settings-mac-terminal/11.png](/assets/images/settings-mac-terminal/11.png)
+![/assets/images/settings-mac-terminal/11.png](https://blog.dnd.ac/assets/images/settings-mac-terminal/11.png)
 
 ## 마무리하며...
 

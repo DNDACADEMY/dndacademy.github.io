@@ -41,7 +41,7 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 git cz
 ```
 
-![/assets/images/github-commitzen-template/1.png](/assets/images/github-commitzen-template/1.png)
+![/assets/images/github-commitzen-template/1.png](https://blog.dnd.ac/assets/images/github-commitzen-template/1.png)
 
 commit 메시지의 prefix를 지정한다.
 
@@ -54,7 +54,7 @@ style: 코드 포맷팅, 세미콜론 누락 등
 refactor: 기존 코드에 대한 리펙토링을 진행
 ```
 
-![/assets/images/github-commitzen-template/2.png](/assets/images/github-commitzen-template/2.png)
+![/assets/images/github-commitzen-template/2.png](https://blog.dnd.ac/assets/images/github-commitzen-template/2.png)
 
 커밋에 대한 Title, Description등을 입력한다.
 이 과정에서 이슈에 대한 연결도 지정하여 git push를 진행한다.
@@ -104,4 +104,4 @@ Github를 이용하게 될 경우 PR(Pull Request), Issue 등록 등을 통해�
 
 최종적으로 아래와 같은 사진의 형태가 일관되게 나오는것을 알 수 있다.
 
-![/assets/images/github-commitzen-template/3.png](/assets/images/github-commitzen-template/3.png)
+![/assets/images/github-commitzen-template/3.png](https://blog.dnd.ac/assets/images/github-commitzen-template/3.png)

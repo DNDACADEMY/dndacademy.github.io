@@ -21,7 +21,7 @@ sitemap:
 Gitflow Workflow에서는 항상 유지되는 메인 브랜치들(master, develop)과 일정 기간 동안만 유지되는 보조 브랜치들(feature, release, hotfix)을 포함하여 총 5가지의 브랜치를 사용한다.
 <br>
 아래는 [Gitflow Workflow 방법](https://gmlwjd9405.github.io/2018/05/12/how-to-collaborate-on-GitHub-3.html)에서 사용하는 브랜치의 흐름이다.
-![](/assets/images/types-of-git-branch/total-branch.png)
+![](https://blog.dnd.ac/assets/images/types-of-git-branch/total-branch.png)
 
 ## 1. Master Branch
 
@@ -29,7 +29,7 @@ Gitflow Workflow에서는 항상 유지되는 메인 브랜치들(master, develo
 <br>
 배포(Release) 이력을 관리하기 위해 사용.
 즉, 배포 가능한 상태만을 관리한다.
-![](/assets/images/types-of-git-branch/develop-branch.svg){: width="500" height="350"}
+![](https://blog.dnd.ac/assets/images/types-of-git-branch/develop-branch.svg){: width="500" height="350"}
 
 ## 2. Develop Branch
 
@@ -39,7 +39,7 @@ Gitflow Workflow에서는 항상 유지되는 메인 브랜치들(master, develo
 즉, 모든 기능이 추가되고 버그가 수정되어 배포 가능한 안정적인 상태라면 develop 브랜치를 'master' 브랜치에 병합(merge)한다.
 <br>
 평소에는 이 브랜치를 기반으로 개발을 진행한다.
-![](/assets/images/types-of-git-branch/develop-branch.png){: width="380" height="550"}
+![](https://blog.dnd.ac/assets/images/types-of-git-branch/develop-branch.png){: width="380" height="550"}
 
 ## 3. Feature branch
 
@@ -60,7 +60,7 @@ feature 브랜치에서의 작업은 기본적으로 공유할 필요가 없기 
   - master, develop, release-(RB\_), or hotfix- 제외
   - [feature/기능요약] 형식을 추천 EX) feature/login
 
-![](/assets/images/types-of-git-branch/feature-branch.svg){: width="500" height="350"}
+![](https://blog.dnd.ac/assets/images/types-of-git-branch/feature-branch.svg){: width="500" height="350"}
 
 - feature 브랜치 생성 및 종료 과정
 
@@ -85,7 +85,7 @@ $ git push origin develop
 - <mark>--no-ff 옵션</mark>
   - 새로운 커밋 객체를 만들어 'develop' 브랜치에 merge 한다.
   - 이것은 'feature' 브랜치에 존재하는 커밋 이력을 **모두 합쳐서** 하나의 새로운 커밋 객체를 만들어 'develop' 브랜치로 병합(merge)하는 것이다.
-  - ![](/assets/images/types-of-git-branch/feature-branch-merge.png){: width="450" height="400"}
+  - ![](https://blog.dnd.ac/assets/images/types-of-git-branch/feature-branch-merge.png){: width="450" height="400"}
 
 ## 4. Release Branch
 
@@ -113,7 +113,7 @@ $ git push origin develop
   - release-RB\__ 또는 release-_ 또는 release/\* 처럼 이름 짓는 것이 일반적인 관례
   - [release-* ] 형식을 추천 EX) release-1.2
 
-![](/assets/images/types-of-git-branch/release-branch.svg){: width="500" height="350"}
+![](https://blog.dnd.ac/assets/images/types-of-git-branch/release-branch.svg){: width="500" height="350"}
 
 - release 브랜치 생성 및 종료 과정
 
@@ -160,7 +160,7 @@ $ git branch -d release-1.2
 
 3. hotfix 브랜치에서의 변경 사항은 'develop' 브랜치에도 병합(merge)한다.
 
-![](/assets/images/types-of-git-branch/hotfix-branch.png){: width="420" height="550"}
+![](https://blog.dnd.ac/assets/images/types-of-git-branch/hotfix-branch.png){: width="420" height="550"}
 
 버그 수정만을 위한 ‘hotfix’ 브랜치를 따로 만들었기 때문에, 다음 배포를 위해 개발하던 작업 내용에 전혀 영향을 주지 않는다. ‘hotfix’ 브랜치는 master 브랜치를 부모로 하는 임시 브랜치라고 생각하면 된다.
 
@@ -192,7 +192,7 @@ $ git merge --no-ff hotfix-1.2.1
 
 ## Branch의 전체 흐름
 
-![](/assets/images/types-of-git-branch/hotfix-branch.svg){: width="500" height="350"}
+![](https://blog.dnd.ac/assets/images/types-of-git-branch/hotfix-branch.svg){: width="500" height="350"}
 
 # 관련된 Post
 

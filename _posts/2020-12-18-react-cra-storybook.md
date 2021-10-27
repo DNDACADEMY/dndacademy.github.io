@@ -26,11 +26,11 @@ npx -p @storybook/cli sb init
 
 ## - babel-loader 문제로 인한 yarn start시 에러발생 해결방법
 
-![/assets/images/react-cra-storybook/01.png](/assets/images/react-cra-storybook/01.png)  
-`yarn start`시에 **babel-loader**에서 종속성 문제가 발생할 수 있다.   
-typescript와 스토리북에서 모두 babel-loader를 사용하고 있어서 생기는 문제라고 되어있는것 같다.   
-이를 해결하기 위해서 우선, node_modules, yarn.lock(혹은 package-lock.json)을 삭제하고   
-package.json에 다음과 같은 부분을 추가후 다시 실행을 하면 정상 구동되는 부분을 확인할 수 있다.   
+![/assets/images/react-cra-storybook/01.png](https://blog.dnd.ac/assets/images/react-cra-storybook/01.png)  
+`yarn start`시에 **babel-loader**에서 종속성 문제가 발생할 수 있다.  
+typescript와 스토리북에서 모두 babel-loader를 사용하고 있어서 생기는 문제라고 되어있는것 같다.  
+이를 해결하기 위해서 우선, node_modules, yarn.lock(혹은 package-lock.json)을 삭제하고  
+package.json에 다음과 같은 부분을 추가후 다시 실행을 하면 정상 구동되는 부분을 확인할 수 있다.
 
 ```json
 "resolutions": {

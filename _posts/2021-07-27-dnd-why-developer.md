@@ -49,21 +49,21 @@ sitemap:
 
 2기에 운영진으로 합류하여 5기까지 진행을 하면서 여러 가지 일들이 있었던 것 같습니다.
 먼저, **DND 홈페이지 리브랜딩**이 기억에 남는 것 같습니다.
-![/assets/images/dnd-why-developer/02.png](/assets/images/dnd-why-developer/02.png)
+![/assets/images/dnd-why-developer/02.png](https://blog.dnd.ac/assets/images/dnd-why-developer/02.png)
 기존에 홈페이지에서 탈바꿈하여 로고도 새롭게 정의하고, 디자인도 새로 하여서, 전혀 다른 홈페이지로의 탈바꿈!  
 언어로는 vue를 선택하여 진행하였고 내가 참여하고 있는 모임의 브랜딩부터, 메인 컬러 색상 지정 등을 통해 와이어 프레임이 나오고,  
 이를 통해 `main`, `project`, `Organizer`, `FAQ`, `Contact`를 분담하여 하나 하나 만들어 가면서 **재미있다!** 라는 감정을 느낄 수 있었습니다.  
 여러분들이 **기수 모집**에 대해서 궁금한 점이 있으면 편하게 문의할 수 있도록 채널 톡 기능을 추가하고, 실제로 많은 문의가 들어오는 것을 보면서 뿌듯하기도 하였습니다.
 
 두 번째로는, **참가자들의 생각보다 뛰어난 능력!**인 것 같네요.  
-![/assets/images/dnd-why-developer/03.png](/assets/images/dnd-why-developer/03.png)
+![/assets/images/dnd-why-developer/03.png](https://blog.dnd.ac/assets/images/dnd-why-developer/03.png)
 현재 진행 중인 5기에서는 '8주간 진행되는 사이드 프로젝트에서 이걸 한다고!?'라고 저희 운영진이 놀랄만한 아키텍처를 보여주고 실현하고 있습니다.  
 개발 환경구성을 할 때 Docker로 구성하는 경우는 많지만 한발 더 나아가 **Kubernetes**를 사용하려는 팀은 처음 보았습니다.  
 실무에서도 적용하기가 무척 어려운 부분을 여기서 적용한다니...  
 정말 참가자분들의 열정이 무섭다는 생각이 조금 들면서, 저도 여기서 더 노력해야겠다는 반성을 하게 되는 순간이었습니다.
 
 마지막으로 기억나는 것 하나만 더 말해보자면, **반려 식물**이 아닐까 싶습니다.
-![/assets/images/dnd-why-developer/01.png](/assets/images/dnd-why-developer/01.png)
+![/assets/images/dnd-why-developer/01.png](https://blog.dnd.ac/assets/images/dnd-why-developer/01.png)
 `'반려 식물? 반려동물이 아니라...?'`라는 생각이 처음 들었습니다.  
 저에게는 익숙한 단어가 아니었기 때문이겠죠.  
 하지만, 팀원들의 발표를 들으면서 반려 식물을 키우거나 관심이 있는 사람들이 생각보다 많다는 것을 알게 되었고, **반려 식물 집사를 위한 반려 식물 큐레이터 서비스**를 기획한 것을 보고 획기적이라는 생각도 들었습니다.

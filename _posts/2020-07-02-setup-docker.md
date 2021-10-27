@@ -21,11 +21,11 @@ sitemap:
 “버전 2004”는 우분투 리눅스의 버전 네이밍을 유사하며 20년 04월 업데이트를 뜻합니다. 아래와 같은 Windows 정보는 윈도우 실행창에서 winver 를 실행하시면 확인하실 수 있습니다.  
 이전 버전이시라면 필히 최신 윈도우 버전으로 업데이트해주세요. WSL v2를 지원하는 정확한 버전은 “윈도우 10 빌드 18197” 이상입니다.
 
-![/assets/images/setup-docker/10.png](/assets/images/setup-docker/10.png)
+![/assets/images/setup-docker/10.png](https://blog.dnd.ac/assets/images/setup-docker/10.png)
 
 윈도우 버전은 명령 프롬프트에서 ver 명령으로도 확인 가능합니다.
 
-![/assets/images/setup-docker/11.png](/assets/images/setup-docker/11.png)
+![/assets/images/setup-docker/11.png](https://blog.dnd.ac/assets/images/setup-docker/11.png)
 
 ### 2. “가상 머신 플랫폼” 옵션 구성 요소 사용
 
@@ -48,7 +48,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 ### 3. Linux용 Windows 하위 시스템 설치
 
-![/assets/images/setup-docker/12.png](/assets/images/setup-docker/12.png)
+![/assets/images/setup-docker/12.png](https://blog.dnd.ac/assets/images/setup-docker/12.png)
 
 리눅스 배포판을 설치하는 데에 다음 2가지 옵션을 지원합니다.
 
@@ -80,15 +80,15 @@ Add-AppxPackage .\Ubuntu-1804.appx
 
 윈도우 시작 버튼을 눌러 설치한 리눅스 배포판 이름을 검색하여, 앱을 실행해주세요. 아래 스크린샷은 Ubuntu 20.04 버전을 설치했을 경우입니다.
 
-![/assets/images/setup-docker/13.png](/assets/images/setup-docker/13.png)
+![/assets/images/setup-docker/13.png](https://blog.dnd.ac/assets/images/setup-docker/13.png)
 
 새로 설치한 리눅스 배포판이 처음 실행되면 콘솔창이 열리고 설치가 완료될 때까지 1~2분 기다리라는 메시지가 표시됩니다. 이 설치의 마지막 단계에서 배포판의 파일을 압축을 풀고 PC에 저장하여 사용할 준비를 합니다. PC 스토리지 성능에 따라 약 1분 이상이 소요될 수 있습니다. 이 단계는 배포판을 새로 설치할 때에만 수행되며, 이후의 모든 시작에는 1초 미만의 시간으로 빠르게 구동됩니다.
 
-![/assets/images/setup-docker/14.png](/assets/images/setup-docker/14.png)
+![/assets/images/setup-docker/14.png](https://blog.dnd.ac/assets/images/setup-docker/14.png)
 
 설치가 끝나면 새 사용자 계정 및 암호를 만들라는 메시지가 표시됩니다. 이 사용자 계정은 윈도우 사용자 이름과는 관련이 없습니다. 원하는 사용자 이름과 암호를 입력하시면 됩니다. WSL 리눅스 쉘을 열 때에는 암호 입력을 요구하지 않지만, sudo를 사용할 경우 암호를 입력해야합니다.
 
-![/assets/images/setup-docker/15.png](/assets/images/setup-docker/15.png)
+![/assets/images/setup-docker/15.png](https://blog.dnd.ac/assets/images/setup-docker/15.png)
 
 ### 5. 배포판 팩키지 업데이트 및 업그레이드
 
@@ -104,17 +104,17 @@ WSL에 대해서 보다 깊게 살펴보고 싶으시다면, https://devblogs.mi
 
 wsl -l -v 명령으로 설치한 배포판에 대한 WSL 버전을 확인하실 수 있습니다. 설치하신 배포판 버전에 맞게 버전을 확인해주세요.
 
-![/assets/images/setup-docker/16.png](/assets/images/setup-docker/16.png)
+![/assets/images/setup-docker/16.png](https://blog.dnd.ac/assets/images/setup-docker/16.png)
 
 위와 같이 버전1로 확인이 된다면, “wsl --set-version <배포판이름> 2” 명령으로 WSL 버전2로 올리실 수 있습니다. 반대로 버전2를 버전1으로 내리는 것도 가능합니다.
 
-![/assets/images/setup-docker/17.png](/assets/images/setup-docker/17.png)
+![/assets/images/setup-docker/17.png](https://blog.dnd.ac/assets/images/setup-docker/17.png)
 
 ### 7. WSL 디폴트 배포판 설정하기
 
 “wsl --set-default <배포판이름>” 명령으로 wsl 디폴트 배포판을 설정하실 수 있습니다.
 
-![/assets/images/setup-docker/18.png](/assets/images/setup-docker/18.png)
+![/assets/images/setup-docker/18.png](https://blog.dnd.ac/assets/images/setup-docker/18.png)
 
 디폴트 배포판을 설정 하신 후에 wsl 명령으로 배포판을 구동하신 후에, 우분투 리눅스 기준으로 “lsb_release -a” 명령으로 우분투 리눅스 배포판 버전을 확인하실 수 있습니다.
 
@@ -142,15 +142,15 @@ wsl -l -v 명령으로 설치한 배포판에 대한 WSL 버전을 확인하실 
 
 - VirtualBox에서 사용할 포트를 포트포워딩합니다. (default 이미지를 클릭하시고 상단의 설정을 클릭하여 진입이 가능합니다.)
 
-![/assets/images/setup-docker/01.png](/assets/images/setup-docker/01.png)
+![/assets/images/setup-docker/01.png](https://blog.dnd.ac/assets/images/setup-docker/01.png)
 
-![/assets/images/setup-docker/02.png](/assets/images/setup-docker/02.png)
+![/assets/images/setup-docker/02.png](https://blog.dnd.ac/assets/images/setup-docker/02.png)
 
 - VirtualBox에서 머신폴더를 마운트합니다.
 
-![/assets/images/setup-docker/03.png](/assets/images/setup-docker/03.png)
+![/assets/images/setup-docker/03.png](https://blog.dnd.ac/assets/images/setup-docker/03.png)
 
-![/assets/images/setup-docker/04.png](/assets/images/setup-docker/04.png)
+![/assets/images/setup-docker/04.png](https://blog.dnd.ac/assets/images/setup-docker/04.png)
 
 ---
 
@@ -160,7 +160,7 @@ wsl -l -v 명령으로 설치한 배포판에 대한 WSL 버전을 확인하실 
 
 먼저 가상화(Virtualization) 옵션이 켜져있는 지 확인해주세요. 작업관리자 (단축키: Ctrl+Shift+ESC)의 성능 탭에서 확인하실 수 있습니다.
 
-![/assets/images/setup-docker/19.png](/assets/images/setup-docker/19.png)
+![/assets/images/setup-docker/19.png](https://blog.dnd.ac/assets/images/setup-docker/19.png)
 
 가상화 옵션이 꺼져있고, 가상화를 지원하는 컴퓨터라면 바이오스 설정에서 가상화 옵션을 켜주세요. 윈도우 바이오스 설정에서 Virtualization Technology (VT)를 활성화하시면 됩니다.
 이제 Hyper-V를 설치합니다. 관리자 권한의 파워쉘에서 다음 명령을 통해 설치하실 수 있습니다.
@@ -175,17 +175,17 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 - Window Bios에서 Virtualization Technology(VT)를 활성화 해주세요.(VT를 사용하지 못하면 Hiper-V를 사용하지 못하기 때문에 다른 경우의 방법으로 설치하셔야 합니다.)
 - 제어판 - 프로그램 및 기능 - Windows 기능 켜기/끄기 - Hyper-V 체크
 
-![/assets/images/setup-docker/05.png](/assets/images/setup-docker/05.png)
+![/assets/images/setup-docker/05.png](https://blog.dnd.ac/assets/images/setup-docker/05.png)
 
-![/assets/images/setup-docker/06.png](/assets/images/setup-docker/06.png)
+![/assets/images/setup-docker/06.png](https://blog.dnd.ac/assets/images/setup-docker/06.png)
 
 - 재부팅해줍니다.
 - 아래와 같이 고래모양의 Docker가 실행됩니다. Docker는 원래 리눅스 기반에서 만들어진 기술이기때문에 윈도우 컨테이너에서는 Docker 사용이 불가능하니 반드시 **Switch to Linux containers**를 클릭해 리눅스 컨테이너로 스위칭 해주셔야 합니다.
   제대로 설치가 완료되고, 셋팅이 완료된다면 윈도우 Command, Powershell에서 Docker 명령어의 사용이 가능해집니다.
 
-![/assets/images/setup-docker/07.png](/assets/images/setup-docker/07.png)
+![/assets/images/setup-docker/07.png](https://blog.dnd.ac/assets/images/setup-docker/07.png)
 
-![/assets/images/setup-docker/08.png](/assets/images/setup-docker/08.png)
+![/assets/images/setup-docker/08.png](https://blog.dnd.ac/assets/images/setup-docker/08.png)
 
 ---
 
@@ -193,11 +193,11 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 
 WSL v2를 설치하시고 WSL 리눅스 배포판을 설치하셨다면, Docker Desktop 옵션에서 “Enable the experimental WSL 2 based engine” 옵션을 켜주세요. 기존에 Hyper-V를 사용하고 계셨다면, Hyper-V에 생성된 VM은 자동 제거되고, WSL에 docker-desktop 배포판과 docker-desktop-data 배포판이 자동으로 추가됩니다. 이때 외부 네트워크 접속이 필요할 수 있습니다.
 
-![/assets/images/setup-docker/20.png](/assets/images/setup-docker/20.png)
+![/assets/images/setup-docker/20.png](https://blog.dnd.ac/assets/images/setup-docker/20.png)
 
 다음과 같이 docker-desktop 배포판을 확인하실 수 있습니다.
 
-![/assets/images/setup-docker/21.png](/assets/images/setup-docker/21.png)
+![/assets/images/setup-docker/21.png](https://blog.dnd.ac/assets/images/setup-docker/21.png)
 
 ---
 
@@ -232,7 +232,7 @@ docker run --rm -it -p 8000:80 nginx # nginx 도커이미지에 대한 컨테이
 # -p 8000:80 : 컨테이너 외부에서 들어오는 8000번 포트를 80으로 보내라.
 ```
 
-![/assets/images/setup-docker/09.png](/assets/images/setup-docker/09.png)
+![/assets/images/setup-docker/09.png](https://blog.dnd.ac/assets/images/setup-docker/09.png)
 
 ---
 
