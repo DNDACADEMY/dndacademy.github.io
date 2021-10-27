@@ -18,6 +18,7 @@ layout: null
         <author>{{ post.author }}</author>
         <image>{{ post.image }}</image>
         <authorImage>{{ site.authors[post.author].gravatar }}</authorImage>
+        <authorName>{{ site.authors[post.author].display_name }}</authorName>
         <description>{{ post.content | xml_escape }}</description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
