@@ -4,7 +4,7 @@ title: "디자인 세미나 주최하기 feat. DND"
 author: Dajeong
 categories: [DND]
 tags: [디자인, 세미나, designer, seminar]
-image: assets/images/settings-mac-terminal/logo.png
+image: assets/images/dnd-design-seminer/logo.png
 sitemap:
   changefreq: daily
   priority: 1.0
@@ -16,13 +16,13 @@ sitemap:
 
 올 여름, 개발자와 디자이너가 함께 프로젝트를 진행하게 도와주는 IT비영리 단체의 디자인 파트 운영진으로 활동하다, 1년 정도 백수로 지내면서 IT업계 번아웃과 개인적인 커리어 고민, 건강 문제 등 으로 DND 운영진을 잠깐 쉬고 있었다.
 
-![https://miro.medium.com/max/1400/1*nVjgmUUIGMclajsK5UVU0A.png](https://miro.medium.com/max/1400/1*nVjgmUUIGMclajsK5UVU0A.png)
+![/assets/images/dnd-design-seminer/1.png](/assets/images/dnd-design-seminer/1.png)
 
 외부 세미나라니!! 본격 지인 끌어모을 준비해보기
 
 하지만, 끊임없이 DND 운영 모니터링을 하고 있던 도중 후원 금액으로 처음 DND에서 외부 세미나를 준비할 수 있게 된 것을 보았다. 👀찐 ENFP인 나는 쉬고 있더라도 이 재미난 기획을 놓칠 수 없었고(엄청 설레는중), 인맥을 총 동원해 연사님을 찾아 나섰다.
 
-![https://miro.medium.com/max/1400/1*KaaEfTiZUqNbGN7uu5ACMA.png](https://miro.medium.com/max/1400/1*KaaEfTiZUqNbGN7uu5ACMA.png)
+![/assets/images/dnd-design-seminer/2.png](/assets/images/dnd-design-seminer/2.png)
 
 정말 멋진- 디자이너 현지님, 민희님 감사합니다!
 
@@ -30,19 +30,19 @@ sitemap:
 
 # **본격적인 세미나는?**
 
-![https://miro.medium.com/max/1400/1*gTUc0BwakebHTv_HWEg0pg.png](https://miro.medium.com/max/1400/1*gTUc0BwakebHTv_HWEg0pg.png)
+![/assets/images/dnd-design-seminer/3.png](/assets/images/dnd-design-seminer/3.png)
 
 전반적인 리딩 다영💪님, 세팅까지 디테일 현주👏님 고생하셨어요! 마무리까지 깔끔-
 
 막상 외부 세미나를 준비하려 하니, 연사님들에게 정식으로 DND 소개, 실제 세미나 콘텐츠 기획, 세미나 홍보물 디자인, 노쇼 방지에대한 운영 논의, 웨비나 결제 및 세팅, 홍보 채널 선택 등 세미나를 운영하기 위해 **총 14번의 회의**를 진행하게 되었다.
 
-![https://miro.medium.com/max/1400/1*6SfXtF09PxLLJbfPjw0jcQ.png](https://miro.medium.com/max/1400/1*6SfXtF09PxLLJbfPjw0jcQ.png)
+![/assets/images/dnd-design-seminer/4.png](/assets/images/dnd-design-seminer/4.png)
 
 거의 1–2주일만에 완성한 콘텐츠 기획과 디자인
 
 처음에는 우왕 좌왕 했지만, 서로가 세미나를 준비하면서 필요한 점을 이야기하며, 각자 맡은 바를 정해 촉박한 일정에도 차질없이 차근 차근 세미나를 준비하게 되었다.
 
-![https://miro.medium.com/max/1400/1*DCsJjfz6lGGCe5P9I3GLKA.png](https://miro.medium.com/max/1400/1*DCsJjfz6lGGCe5P9I3GLKA.png)
+![/assets/images/dnd-design-seminer/5.png](/assets/images/dnd-design-seminer/5.png)
 
 DND OPEN SEMINAR
 
@@ -56,25 +56,13 @@ P.S 촉박한 일정에도 완벽하게 준비해주신 연사 3분에게 정말
 
 본격적인 휴식 기간 전 성공적인 세미나와 5기 마무리로 뒷풀이 할 겸 DND 디자인 운영진들이 모였는데!
 
-![https://miro.medium.com/max/1400/1*sxro9jeRKLiQQz2OMNNlHw.png](https://miro.medium.com/max/1400/1*sxro9jeRKLiQQz2OMNNlHw.png)
+![/assets/images/dnd-design-seminer/6.png](/assets/images/dnd-design-seminer/6.png)
 
 J들과 함께해서 참 다행이다🥰
 
 뒷풀이에서도 서로 고생했다하고 끝나면 다행이었지만 열정적인 뒷풀이에서도 조금 씩 DND의 앞으로를 이야기 하게 되었다.
 
-그러다… 찐 ENFP(
-
-[Dayo Lee](https://medium.com/u/c715972ee8a1?source=post_page-----7ad89cb3a4d7-----------------------------------)
-
-)가 꿈꾸는 성장하게 될 DND의 세미나 아이디어를 내년 하반기🏖까지 장기 계획으로 아이디어 내용을 쏟아냈고, ENTJ(
-
-[현주](https://brunch.co.kr/@hjjju)
-
-)가 공감하며 세미나 디테일한 내용을 정리 한 후, ISTJ(
-
-[Dayoung Jeong](https://medium.com/u/4ae55fb26ff8?source=post_page-----7ad89cb3a4d7-----------------------------------)
-
-)은 다시 세미나를 주최하면 주의해야 할 점을 이야기하면서도… 열정 피플인 우리들은 쉴 생각도 없이 즐겁게 새로운 세미나 준비를 시작하게 되었다!😂
+그러다… 찐 ENFP([Dayo Lee](https://medium.com/u/c715972ee8a1?source=post_page-----7ad89cb3a4d7-----------------------------------))가 꿈꾸는 성장하게 될 DND의 세미나 아이디어를 내년 하반기🏖까지 장기 계획으로 아이디어 내용을 쏟아냈고, ENTJ([현주](https://brunch.co.kr/@hjjju))가 공감하며 세미나 디테일한 내용을 정리 한 후, ISTJ([Dayoung Jeong](https://medium.com/u/4ae55fb26ff8?source=post_page-----7ad89cb3a4d7-----------------------------------))은 다시 세미나를 주최하면 주의해야 할 점을 이야기하면서도… 열정 피플인 우리들은 쉴 생각도 없이 즐겁게 새로운 세미나 준비를 시작하게 되었다!😂
 
 # **세미나는 이제 껌먹고, 줄넘기 하며, 백덤블링 할지도?**
 
@@ -82,7 +70,7 @@ J들과 함께해서 참 다행이다🥰
 
 새로 6기 DND 디자인 운영으로 참가하신 프로덕트 디자이너(문예성), UX 리서처(이제욱)님께서도 세미나 기획 의도를 듣고는 엄청난 열정을 다행히도 보여주셨다.(부담스러우실까 봐 조금 걱정이었는데… 알고 보니 열정피플) 처음 나왔던 아이디어를 이야기하면서 1차 킥오프를 진행한 결과, 두 번째 세미나는 **IT주니어가 갈 수 있는 다양한 커리어 방향**을 알려주는 주제로 준비하게 되었다.
 
-![https://miro.medium.com/max/1400/1*MSraEv0YfqWK8Ksr1Wt4-g.png](https://miro.medium.com/max/1400/1*MSraEv0YfqWK8Ksr1Wt4-g.png)
+![/assets/images/dnd-design-seminer/7.png](/assets/images/dnd-design-seminer/7.png)
 
 직장다니면서 운영진 모두 참여한 20번의 세미나 회의 및 리뷰
 
@@ -94,7 +82,7 @@ J들과 함께해서 참 다행이다🥰
 2. 4명의 연사님과 행사 일정. 섭외가 모두 완료 후에도 연사님 4분의 일정을 모두 조율하기에는 고려할 사항이 많았다. 세미나 홍보 기간과 DND 6기 활동과 겹치지 않는 날짜로 우선순위를 잡고, 여러번의 논의를 거쳐 주요 일정을 정했다. 이 과정에서 1차 세미나보다 더 많은 논의 거리가 생겨 운영 cost가 더 필요했었다.
 3. 개인적인 취직 시작! 이전 세미나에서는 백수인 내가 직장인들인 운영진분들 대신에 평일 시간을 쪼개서 세미나 진행을 할 수 있었는데, 취직을 하게 되며 퇴근 후 준비하는 시간이 턱없이 부족했고, 나눠서 하더라도 운영진 개개인이 맡은 바를 처리하기에는 시간이 촉박했다. 또한, 잦은 회의로 운영진 모두가 지칠까 봐 걱정이 되었다.
 
-![https://miro.medium.com/max/1400/1*FuqL6NLBvGOjXhNMezoVqA.png](https://miro.medium.com/max/1400/1*FuqL6NLBvGOjXhNMezoVqA.png)
+![/assets/images/dnd-design-seminer/8.png](/assets/images/dnd-design-seminer/8.png)
 
 흔쾌히 참여해주신 연사님 모두 감사합니다:)
 
@@ -104,7 +92,7 @@ P.S 주니어 디자이너들을 위해 다양한 인사이트를 알려주신 �
 
 # **2021년, 세미나를 마무리하며**
 
-![https://miro.medium.com/max/1400/1*tqLb5FJxgdz2pSpnPZEsdw.png](https://miro.medium.com/max/1400/1*tqLb5FJxgdz2pSpnPZEsdw.png)
+![/assets/images/dnd-design-seminer/9.png](/assets/images/dnd-design-seminer/9.png)
 
 총 42개의 CS처리 담당
 
@@ -134,13 +122,13 @@ P.S 주니어 디자이너들을 위해 다양한 인사이트를 알려주신 �
 
 이 시기를 잘 맞아 도움이 필요한 이들에게 좀 더 많은 인사이트를 알려주는 미드를 넘어 시니어 디자이너가 되어 보려 한다.
 
-![https://miro.medium.com/max/1400/1*7BkUrIlQny74BwifEjerpA.png](https://miro.medium.com/max/1400/1*7BkUrIlQny74BwifEjerpA.png)
+![/assets/images/dnd-design-seminer/10.png](/assets/images/dnd-design-seminer/10.png)
 
 매 순간 성장하는 모든 디자이너들을 응원합니다.💖
 
 — — — — — —
 
-![https://miro.medium.com/max/1400/1*v7scDaUe3c5ZyTGkcUNUoQ.png](https://miro.medium.com/max/1400/1*v7scDaUe3c5ZyTGkcUNUoQ.png)
+![/assets/images/dnd-design-seminer/11.png](/assets/images/dnd-design-seminer/11.png)
 
 개인적 연락하고 싶다면, 💖**[링크드인 바로가기](https://www.linkedin.com/in/dajeong-lee-7b241b93/)**  
 DND에 참여하고 싶다면, 🏠**[홈페이지 확인하기](https://dnd.ac/)**
