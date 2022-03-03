@@ -59,7 +59,15 @@ refactor: 기존 코드에 대한 리펙토링을 진행
 커밋에 대한 Title, Description등을 입력한다.
 이 과정에서 이슈에 대한 연결도 지정하여 git push를 진행한다.
 
-# 2. Pull Request Template / Issue Template
+# 2 git cz에 이모지(emozi) 추가하기!
+
+1. `~/.czrc`의 path를 `cz-emoji-conventional`로 변경한다.
+2. `npm install -g cz-emoji-conventional cz-emoji` 설치
+3. `git cz`로 이모지가 추가되어있는지 확인한다!
+
+![/assets/images/github-commitzen-template/4.png](https://blog.dnd.ac/assets/images/github-commitzen-template/4.png)
+
+# 3. Pull Request Template / Issue Template
 
 Github를 이용하게 될 경우 PR(Pull Request), Issue 등록 등을 통해서 프로젝트를 진행한다.  
 이 과정에서 어떤 작업에 대한 내용인지, 어떠한 이슈인지를 조금 더 명확하게 알 수 있게 하기위해 구체적인 PR/Issue 등록을 해주는 것이 중요하다.  
