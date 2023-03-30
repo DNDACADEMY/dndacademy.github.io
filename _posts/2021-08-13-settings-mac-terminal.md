@@ -185,14 +185,14 @@ alias llg='logo-ls -alD'
 
 **logo-ls**에 해당되지 않는 font의 경우 아이콘 대신 ?와 같은 표시가 나올겁니다.
 이에 대해서 제대로 적용하기 위해서 `nerd font`가 필요합니다.  
-우리는 그 중에서 `FiraMono Nerd Font`를 설치할 예정입니다.
+우리는 그 중에서 ~~FiraMono Nerd Font~~ `FuraMono Nerd Font Mono`를 설치할 예정입니다.
 
 ```bash
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-mono-nerd-font
 ```
 
-설치를 완료한 후 iTerm 화면에서 **Command + ,(콤마)** 단축키를 이용해 설정 창을 열어준다. 그 다음 **Profiles > Text 탭**의 Font 섹션 아래에 있는 `Change Font` 버튼을 클릭(혹은 폰트에 대한 select가 보입니다.) 하여 **FiraMono Nerd Font**를 적용해줍니다.
+설치를 완료한 후 iTerm 화면에서 **Command + ,(콤마)** 단축키를 이용해 설정 창을 열어준다. 그 다음 **Profiles > Text 탭**의 Font 섹션 아래에 있는 `Change Font` 버튼을 클릭(혹은 폰트에 대한 select가 보입니다.) 하여 ~~FiraMono Nerd Font (옛날 버전에서 사용하였습니다.)~~ **FuraMono Nerd Font Mono**를 적용해줍니다.
 
 ![/assets/images/settings-mac-terminal/11.png](https://blog.dnd.ac/assets/images/settings-mac-terminal/11.png)
 
