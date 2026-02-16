@@ -27,6 +27,8 @@ sitemap:
 
 ## 프로젝트 소개: 계약서 지킴이
 
+![계약서 지킴이 랜딩 페이지](/assets/images/ai-driven-development-contract-guardian/landing-page.png)
+
 | 항목 | 내용 |
 |------|------|
 | **서비스** | AI 기반 계약서 위험 분석 플랫폼 |
@@ -74,6 +76,8 @@ Claude Code는 터미널에서 동작하는 AI 코딩 에이전트입니다. 단
 ---
 
 ## 개발 워크플로우
+
+![AI-Driven Development Workflow](/assets/images/ai-driven-development-contract-guardian/workflow.png)
 
 ### Phase 1: 프로젝트 설계 (Day 1-2)
 
@@ -171,6 +175,8 @@ Toss Payments 연동은 특히 인상적이었습니다:
 
 랜딩 페이지, 대시보드, 분석 결과 페이지의 UI를 구현하고 반응형으로 다듬었습니다.
 
+![가격 정책 페이지](/assets/images/ai-driven-development-contract-guardian/pricing.png)
+
 ---
 
 ## AI 에이전트와 협업하며 배운 것
@@ -237,6 +243,8 @@ AI는 여러 옵션을 제안할 수 있지만, 프로젝트의 맥락(팀 규�
 ## 기술적 하이라이트
 
 ### Feature-Sliced Design (FSD) 적용
+
+![Feature-Sliced Design Architecture](/assets/images/ai-driven-development-contract-guardian/architecture.png)
 
 ```
 apps/web/src/
