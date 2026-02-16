@@ -27,14 +27,12 @@ sitemap:
 
 ## 프로젝트 소개: 계약서 지킴이
 
-| 항목 | 내용 |
-|------|------|
-| **서비스** | AI 기반 계약서 위험 분석 플랫폼 |
-| **대상** | 프리랜서, 소규모 사업자 |
-| **핵심 기능** | PDF 업로드 → AI 분석(8개 카테고리) → 위험도 점수 → PDF 리포트 |
-| **기술 스택** | Next.js 16, Supabase, Claude API, Toss Payments |
-| **개발 기간** | 약 2주 |
-| **개발 인원** | 1명 + Claude Code |
+- **서비스** — AI 기반 계약서 위험 분석 플랫폼
+- **대상** — 프리랜서, 소규모 사업자
+- **핵심 기능** — PDF 업로드 → AI 분석(8개 카테고리) → 위험도 점수 → PDF 리포트
+- **기술 스택** — Next.js 16, Supabase, Claude API, Toss Payments
+- **개발 기간** — 약 2주
+- **개발 인원** — 1명 + Claude Code
 
 *계약서 지킴이 랜딩 페이지 — "AI가 계약서의 위험을 찾아드립니다"*
 ![계약서 지킴이 랜딩 페이지](/assets/images/ai-driven-development-contract-guardian/landing-page.png)
@@ -165,12 +163,10 @@ Toss Payments 연동은 특히 인상적이었습니다:
 
 또한 4개의 **검증 스킬**을 만들어 반복적으로 코드 품질을 확인했습니다:
 
-| 스킬 | 검증 내용 |
-|------|----------|
-| `verify-api-security` | 인증, 레이트 리밋, 에러 형식, 감사 로그 |
-| `verify-supabase-clients` | 클라이언트/서버/어드민 사용 규칙 |
-| `verify-env-vars` | 환경변수 접두사, 런타임 검증 |
-| `verify-shared-packages` | 패키지 임포트 규칙 준수 |
+- **`verify-api-security`** — 인증, 레이트 리밋, 에러 형식, 감사 로그
+- **`verify-supabase-clients`** — 클라이언트/서버/어드민 사용 규칙
+- **`verify-env-vars`** — 환경변수 접두사, 런타임 검증
+- **`verify-shared-packages`** — 패키지 임포트 규칙 준수
 
 ### Phase 4: UI/UX 및 마무리 (Day 13-14)
 
@@ -288,15 +284,13 @@ const ANALYSIS_CRITERIA = {
 
 ## 숫자로 보는 결과
 
-| 지표 | 수치 |
-|------|------|
-| 개발 기간 | ~2주 |
-| 주요 소스 파일 | 100+ 개 |
-| 패키지 | 4개 (shared, api, ui, config) |
-| API 엔드포인트 | 10개 |
-| 분석 카테고리 | 8개 |
-| 검증 스킬 | 4개 |
-| TypeScript strict 모드 | 적용 |
+- **개발 기간** — ~2주
+- **주요 소스 파일** — 100+ 개
+- **패키지** — 4개 (shared, api, ui, config)
+- **API 엔드포인트** — 10개
+- **분석 카테고리** — 8개
+- **검증 스킬** — 4개
+- **TypeScript strict 모드** — 적용
 
 ---
 
