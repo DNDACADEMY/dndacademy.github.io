@@ -1,0 +1,366 @@
+---
+layout: post
+title: "AI와 함께 프로덕션 서비스 만들기 — 계약서 지킴이 개발기"
+author: Gidong
+categories: [AI]
+tags: [Claude Code, AI 개발, Next.js, 프로젝트 회고, 1인 개발]
+image: assets/images/ai-driven-development-contract-guardian/main.png
+sitemap:
+  changefreq: daily
+  priority: 1.0
+---
+
+> 2주 만에 AI 코딩 에이전트와 함께 프로덕션 레벨의 SaaS를 완성한 경험을 공유합니다.
+> 프롬프트 한 줄이 코드 수백 줄이 되는 시대, 개발자의 역할은 어떻게 달라지는지 이야기합니다.
+
+## 들어가며
+
+"프리랜서가 계약서를 검토받으려면 변호사 상담비만 수십만 원인데, AI가 대신해줄 수 있지 않을까?"
+
+이 한 문장의 아이디어에서 **계약서 지킴이**(Contract Guardian)가 시작되었습니다. PDF 계약서를 업로드하면 AI가 8가지 조항 카테고리별로 위험도를 분석하고, 수정 제안과 함께 리포트를 생성해주는 서비스입니다.
+
+흥미로운 점은 이 프로젝트의 개발 과정 자체에도 AI가 깊이 관여했다는 것입니다. 저는 **Claude Code**(Anthropic의 CLI 기반 AI 코딩 에이전트)를 활용해 약 2주 만에 결제 시스템까지 포함된 프로덕션 서비스를 완성했습니다.
+
+이 글에서는 AI와 함께 개발한 실제 경험 — 무엇이 좋았고, 어디서 한계를 느꼈으며, 개발자로서 어떤 역할을 했는지 솔직하게 공유합니다.
+
+---
+
+## 프로젝트 소개: 계약서 지킴이
+
+![계약서 지킴이 랜딩 페이지](/assets/images/ai-driven-development-contract-guardian/landing-page.png)
+
+| 항목 | 내용 |
+|------|------|
+| **서비스** | AI 기반 계약서 위험 분석 플랫폼 |
+| **대상** | 프리랜서, 소규모 사업자 |
+| **핵심 기능** | PDF 업로드 → AI 분석(8개 카테고리) → 위험도 점수 → PDF 리포트 |
+| **기술 스택** | Next.js 16, Supabase, Claude API, Toss Payments |
+| **개발 기간** | 약 2주 |
+| **개발 인원** | 1명 + Claude Code |
+
+### 분석하는 8가지 카테고리
+
+1. **보수/대금 조건** — 지급 시기, 지연이자, 선급금 조건
+2. **업무 범위** — 범위 명확성, 추가 업무 처리 기준
+3. **지식재산권** — 저작권 귀속, 2차 저작물 권리
+4. **계약 해지** — 해지 사유, 위약금, 통보 기간
+5. **하자보증** — 보증 기간, 무상 수정 범위
+6. **비밀유지** — 비밀정보 범위, 위반 시 제재
+7. **손해배상** — 배상 범위, 한도, 면책 조항
+8. **분쟁 해결** — 관할 법원, 중재 조항
+
+---
+
+## 왜 AI 에이전트로 개발했나
+
+### 1인 개발자의 현실
+
+풀스택 서비스를 혼자 만들려면 프론트엔드, 백엔드, DB 설계, 인증, 결제, 배포까지 모든 것을 직접 해야 합니다. 각 영역의 보일러플레이트 코드만 해도 상당한 시간이 소요되죠.
+
+Claude Code는 이 문제를 해결해주었습니다:
+
+- **보일러플레이트 자동 생성** — Supabase 연동, API 라우트, Zod 스키마 등을 빠르게 스캐폴딩
+- **아키텍처 의사결정 지원** — Feature-Sliced Design 적용 시 레이어 구조와 임포트 규칙을 함께 설계
+- **코드 리뷰 & 리팩터링** — 작성한 코드에 대해 즉시 보안 검토, 패턴 개선 제안
+- **멀티 에이전트 병렬 작업** — 여러 에이전트가 동시에 다른 파일을 수정
+
+### Claude Code란?
+
+Claude Code는 터미널에서 동작하는 AI 코딩 에이전트입니다. 단순 자동완성과는 다르게:
+
+- 프로젝트 전체 구조를 이해하고 **여러 파일을 동시에 수정**
+- `git`, `npm`, 테스트 러너 등 **터미널 명령을 직접 실행**
+- **CLAUDE.md** 파일로 프로젝트 컨벤션을 학습
+- 멀티 에이전트 모드로 **병렬 작업** 수행
+
+---
+
+## 개발 워크플로우
+
+![AI-Driven Development Workflow](/assets/images/ai-driven-development-contract-guardian/workflow.png)
+
+### Phase 1: 프로젝트 설계 (Day 1-2)
+
+처음부터 코드를 작성하지 않았습니다. 먼저 Claude Code와 대화하며 아키텍처를 설계했습니다.
+
+```
+나: "프리랜서를 위한 계약서 분석 SaaS를 만들려고 해.
+    모노레포 구조로 Next.js + Supabase + Claude API를 쓸 건데,
+    확장 가능한 아키텍처를 제안해줘."
+
+Claude Code: [모노레포 구조, 패키지 분리, FSD 아키텍처 제안]
+```
+
+이 단계에서 결정된 핵심 아키텍처:
+
+```
+contract-guardian/
+├── apps/
+│   └── web/          # Next.js (Feature-Sliced Design)
+├── packages/
+│   ├── shared/       # @cg/shared — 타입, 상수, 검증 스키마
+│   ├── api/          # @cg/api — Supabase 서비스, React 훅
+│   ├── ui/           # @cg/ui — 공통 UI 컴포넌트
+│   └── config/       # @cg/config — 공유 설정
+```
+
+**개발자의 역할**: AI가 제안한 구조를 검토하고, 프로젝트 규모에 맞게 조정했습니다. 예를 들어 packages를 4개로 나눈 것은 모바일 앱 확장을 고려한 제 판단이었습니다.
+
+### Phase 2: 핵심 기능 구현 (Day 3-8)
+
+여기서 Claude Code의 진가가 발휘되었습니다.
+
+#### 예시: PDF 업로드 → AI 분석 파이프라인
+
+하나의 기능을 구현하기 위해 필요한 파일이 10개 이상이었습니다:
+
+```
+요청: "PDF 업로드 후 Claude API로 계약서를 분석하는 전체 파이프라인을 구현해줘"
+
+생성된 파일들:
+├── features/upload/api/upload-handler.ts      # 업로드 API
+├── features/upload/ui/upload-zone.tsx         # 드래그앤드롭 UI
+├── features/analysis/api/analyze-handler.ts   # 분석 트리거 API
+├── features/analysis/lib/claude/
+│   ├── client.ts                              # Anthropic 클라이언트
+│   ├── prompts.ts                             # 시스템 프롬프트 (8개 카테고리)
+│   ├── analyze-contract.ts                    # 분석 함수
+│   └── parse-response.ts                      # 응답 파싱
+├── features/report/api/report-handler.ts      # PDF 리포트 생성
+├── shared/lib/pdf-to-images.ts                # PDF → 이미지 변환
+└── entities/analysis/model/types.ts           # 타입 정의
+```
+
+Claude Code는 이 파일들 간의 **의존 관계를 이해**하고, 타입이 일관되도록 한번에 생성했습니다. 수동으로 했다면 파일 간 타입 불일치를 잡는 데만 상당한 시간이 걸렸을 것입니다.
+
+#### 예시: 결제 시스템 통합
+
+Toss Payments 연동은 특히 인상적이었습니다:
+
+```
+요청: "Toss Payments로 결제 후 분석이 시작되는 플로우를 구현해줘.
+      웹훅도 처리해야 하고, PII 필터링도 필요해."
+
+결과:
+- 결제 확인 API + 웹훅 핸들러
+- 결제 상태 머신 (pending_payment → paid → processing → completed)
+- Toss 응답에서 개인정보를 필터링하는 sanitizer
+- 결제 실패 시 재시도 UI
+```
+
+### Phase 3: 보안 & 품질 강화 (Day 9-12)
+
+프로덕션 서비스인 만큼 보안이 중요했습니다. 이 부분에서 **AI 에이전트 위원회**(Agent Council) 방식을 활용했습니다.
+
+```
+요청: "보안 관점에서 전체 API 라우트를 검토해줘"
+
+결과:
+- Rate limiting 미적용 API 3개 발견 → 수정
+- CORS 미들웨어 추가
+- 감사 로그(audit log) 시스템 구현
+- Webhook 서명 검증 로직 보강
+```
+
+또한 4개의 **검증 스킬**을 만들어 반복적으로 코드 품질을 확인했습니다:
+
+| 스킬 | 검증 내용 |
+|------|----------|
+| `verify-api-security` | 인증, 레이트 리밋, 에러 형식, 감사 로그 |
+| `verify-supabase-clients` | 클라이언트/서버/어드민 사용 규칙 |
+| `verify-env-vars` | 환경변수 접두사, 런타임 검증 |
+| `verify-shared-packages` | 패키지 임포트 규칙 준수 |
+
+### Phase 4: UI/UX 및 마무리 (Day 13-14)
+
+랜딩 페이지, 대시보드, 분석 결과 페이지의 UI를 구현하고 반응형으로 다듬었습니다.
+
+![가격 정책 페이지](/assets/images/ai-driven-development-contract-guardian/pricing.png)
+
+---
+
+## AI 에이전트와 협업하며 배운 것
+
+### 잘 된 것
+
+#### 1. CLAUDE.md가 게임 체인저
+
+프로젝트 루트에 `CLAUDE.md` 파일을 두면 Claude Code가 프로젝트 컨벤션을 학습합니다. 저는 이 파일에 다음을 기록했습니다:
+
+- FSD 아키텍처 레이어 규칙
+- Supabase 클라이언트 사용 규칙 (client/server/admin 분리)
+- 인증 패턴 (`requireAuth()` 사용)
+- API 에러 처리 패턴
+
+이후 Claude Code는 **새 코드를 작성할 때 자동으로 이 컨벤션을 따랐습니다**. "인증 체크 빠뜨렸는데?" 같은 리뷰를 할 필요가 줄어들었죠.
+
+#### 2. 멀티 에이전트로 병렬 작업
+
+큰 리팩터링 작업에서 여러 에이전트가 동시에 다른 파일을 수정할 수 있었습니다. 예를 들어 FSD 마이그레이션 시:
+
+- **에이전트 A**: `shared/` 레이어 정리
+- **에이전트 B**: `features/` 레이어 구조화
+- **에이전트 C**: `widgets/` 컴포넌트 분리
+
+서로 다른 레이어를 동시에 작업하니 시간이 크게 단축되었습니다.
+
+#### 3. 즉각적인 코드 리뷰
+
+코드를 작성하자마자 보안 리뷰어, 품질 리뷰어 등 역할별 에이전트에게 검토를 요청할 수 있었습니다. 특히 결제 로직이나 인증 처리에서 놓치기 쉬운 엣지 케이스를 잡아주었습니다.
+
+### 한계와 주의할 점
+
+#### 1. AI가 생성한 코드도 반드시 검토해야 한다
+
+Claude Code가 만든 코드가 "작동"하더라도, 프로덕션에 올리기 전에 반드시 직접 읽고 이해해야 합니다. 몇 가지 사례:
+
+- 레이트 리밋이 인메모리 방식으로 구현되어 서버 재시작 시 초기화되는 문제 → Redis 기반으로 교체 필요성 발견
+- 에러 핸들링이 과도하게 제네릭한 경우 → 구체적인 에러 타입으로 수정
+
+#### 2. 아키텍처 결정은 사람이 해야 한다
+
+AI는 여러 옵션을 제안할 수 있지만, 프로젝트의 맥락(팀 규모, 향후 계획, 기술 부채 허용 범위)을 고려한 **최종 판단은 개발자의 몫**입니다.
+
+예를 들어 Feature-Sliced Design을 채택한 것은 제 판단이었습니다. AI는 일반적인 폴더 구조를 제안했지만, 모바일 앱 확장과 모노레포 구조를 고려하여 FSD를 선택했습니다.
+
+#### 3. 프롬프트 엔지니어링이 개발 스킬이 된다
+
+막연한 요청보다 구체적인 요청이 훨씬 좋은 결과를 만듭니다:
+
+```
+# 나쁜 예
+"로그인 기능 만들어줘"
+
+# 좋은 예
+"Supabase Auth로 Google OAuth 로그인을 구현해줘.
+서버 컴포넌트에서 세션 확인은 shared/api/supabase/server.ts를 사용하고,
+로그인 후 /dashboard로 리다이렉트해줘.
+미들웨어에서 /dashboard 접근 시 인증 확인도 추가해줘."
+```
+
+---
+
+## 기술적 하이라이트
+
+### Feature-Sliced Design (FSD) 적용
+
+![Feature-Sliced Design Architecture](/assets/images/ai-driven-development-contract-guardian/architecture.png)
+
+```
+apps/web/src/
+├── app/              # Next.js App Router (라우팅만 담당)
+├── _pages/           # 페이지 컴포지션
+├── widgets/          # 복합 UI 블록
+├── features/         # 비즈니스 로직 슬라이스
+│   ├── upload/       # 파일 업로드
+│   ├── analysis/     # AI 분석
+│   ├── payment/      # 결제
+│   ├── report/       # PDF 리포트
+│   └── auth/         # 인증
+├── entities/         # 도메인 모델
+│   ├── analysis/
+│   └── payment/
+└── shared/           # 공유 유틸리티
+    ├── api/supabase/ # DB 클라이언트
+    └── lib/          # 인증, 에러, 레이트리밋
+```
+
+FSD의 **단방향 임포트 규칙**(상위 레이어 → 하위 레이어만 가능)이 코드 의존성을 깔끔하게 유지해주었습니다. Claude Code에게 이 규칙을 CLAUDE.md에 명시해두니, 새 코드를 생성할 때 자동으로 규칙을 준수했습니다.
+
+### AI 분석 프롬프트 설계
+
+계약서 분석의 핵심은 Claude API에 보내는 **시스템 프롬프트**입니다. 8개 카테고리별로 구체적인 평가 기준을 정의했습니다:
+
+```typescript
+// features/analysis/lib/claude/prompts.ts (요약)
+const ANALYSIS_CRITERIA = {
+  payment: "지급 시기, 지연이자율, 선급금 비율...",
+  scope: "업무 범위 명확성, 추가 업무 처리 기준...",
+  ip: "저작권 귀속 주체, 2차 저작물 권리...",
+  // ... 8개 카테고리
+};
+```
+
+각 조항에 대해 **0-100 위험도 점수**, **위험 요약**, **수정 제안**, **관련 법령 참조**를 구조화된 JSON으로 응답받습니다. 스캔 문서(이미지)도 Claude의 비전 기능으로 분석할 수 있습니다.
+
+### 검증 스킬 자동화
+
+매번 수동으로 보안 점검을 하는 대신, Claude Code의 **커스텀 스킬** 기능으로 자동화했습니다:
+
+```bash
+# 모든 검증을 한번에 실행
+/verify-implementation
+
+# 개별 검증
+/verify-api-security      # API 보안 패턴
+/verify-supabase-clients  # DB 클라이언트 규칙
+/verify-env-vars          # 환경변수 규칙
+/verify-shared-packages   # 패키지 임포트 규칙
+```
+
+이 스킬들은 `.claude/skills/` 디렉토리에 정의되어 있으며, 코드 변경 후 빠르게 검증할 수 있습니다.
+
+---
+
+## 숫자로 보는 결과
+
+| 지표 | 수치 |
+|------|------|
+| 개발 기간 | ~2주 |
+| 주요 소스 파일 | 100+ 개 |
+| 패키지 | 4개 (shared, api, ui, config) |
+| API 엔드포인트 | 10개 |
+| 분석 카테고리 | 8개 |
+| 검증 스킬 | 4개 |
+| TypeScript strict 모드 | 적용 |
+
+---
+
+## AI 시대의 개발자 역할
+
+이 프로젝트를 통해 느낀 AI 시대 개발자의 역할 변화:
+
+### 코더에서 아키텍트로
+
+AI가 코드 작성을 대폭 가속해주면서, 개발자의 핵심 역할이 "어떻게 짤까"에서 **"무엇을 왜 만들까"**로 이동하고 있습니다.
+
+- **아키텍처 설계**: 모노레포 구조, FSD 레이어 규칙, 패키지 경계
+- **비즈니스 로직 검증**: AI가 계약서를 올바르게 분석하는지 도메인 관점 검토
+- **품질 기준 설정**: CLAUDE.md로 코드 컨벤션 정의, 검증 스킬 설계
+
+### 프롬프트가 새로운 인터페이스
+
+좋은 프롬프트는 좋은 코드를 만듭니다. AI와 협업할 때 중요한 것:
+
+1. **맥락 제공** — 프로젝트 구조, 사용 기술, 제약 조건
+2. **구체적 요구사항** — "로그인 만들어줘"보다 "OAuth + 세션 + 미들웨어"
+3. **검증 기준 명시** — "TypeScript strict, 에러 핸들링 포함"
+4. **점진적 구체화** — 큰 요청 한번보다 작은 요청 여러 번
+
+### 그래도 개발자가 필요한 이유
+
+AI가 아무리 발전해도 다음은 사람이 해야 합니다:
+
+- 사용자 문제를 정의하고 해결 방향을 결정하는 **제품 감각**
+- 기술 부채, 팀 역량, 시간을 고려한 **트레이드오프 판단**
+- 생성된 코드가 정말 올바른지 확인하는 **비판적 검토**
+- 보안, 개인정보, 법적 요구사항을 충족하는지 **책임 판단**
+
+---
+
+## 마치며
+
+계약서 지킴이는 AI 에이전트와 함께 만든 첫 프로덕션 프로젝트였습니다. 2주라는 짧은 시간에 결제 시스템, PDF 리포트, 보안 검증까지 갖춘 서비스를 만들 수 있었던 건, AI가 반복적이고 예측 가능한 작업을 빠르게 처리해주었기 때문입니다.
+
+하지만 가장 중요한 교훈은 이것입니다: **AI는 도구이지 대체제가 아닙니다.** 좋은 도구를 잘 다루는 장인이 더 좋은 작품을 만들듯, AI 에이전트를 효과적으로 활용하려면 탄탄한 개발 기초와 아키텍처 감각이 필요합니다.
+
+AI와 함께 개발하는 시대, 여러분도 한번 도전해보시는 건 어떨까요?
+
+---
+
+## 참고
+
+- [Claude Code 공식 문서](https://docs.anthropic.com/en/docs/claude-code)
+- [Feature-Sliced Design](https://feature-sliced.design/)
+- [Next.js App Router](https://nextjs.org/docs/app)
+- [Supabase](https://supabase.com/)
