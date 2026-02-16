@@ -27,8 +27,6 @@ sitemap:
 
 ## 프로젝트 소개: 계약서 지킴이
 
-![계약서 지킴이 랜딩 페이지](/assets/images/ai-driven-development-contract-guardian/landing-page.png)
-
 | 항목 | 내용 |
 |------|------|
 | **서비스** | AI 기반 계약서 위험 분석 플랫폼 |
@@ -37,6 +35,9 @@ sitemap:
 | **기술 스택** | Next.js 16, Supabase, Claude API, Toss Payments |
 | **개발 기간** | 약 2주 |
 | **개발 인원** | 1명 + Claude Code |
+
+*계약서 지킴이 랜딩 페이지 — "AI가 계약서의 위험을 찾아드립니다"*
+![계약서 지킴이 랜딩 페이지](/assets/images/ai-driven-development-contract-guardian/landing-page.png)
 
 ### 분석하는 8가지 카테고리
 
@@ -175,6 +176,7 @@ Toss Payments 연동은 특히 인상적이었습니다:
 
 랜딩 페이지, 대시보드, 분석 결과 페이지의 UI를 구현하고 반응형으로 다듬었습니다.
 
+*투명한 가격 정책 — 건당 결제, 첫 1건 무료*
 ![가격 정책 페이지](/assets/images/ai-driven-development-contract-guardian/pricing.png)
 
 ---
@@ -245,25 +247,7 @@ AI는 여러 옵션을 제안할 수 있지만, 프로젝트의 맥락(팀 규�
 ### Feature-Sliced Design (FSD) 적용
 
 ![Feature-Sliced Design Architecture](/assets/images/ai-driven-development-contract-guardian/architecture.png)
-
-```
-apps/web/src/
-├── app/              # Next.js App Router (라우팅만 담당)
-├── _pages/           # 페이지 컴포지션
-├── widgets/          # 복합 UI 블록
-├── features/         # 비즈니스 로직 슬라이스
-│   ├── upload/       # 파일 업로드
-│   ├── analysis/     # AI 분석
-│   ├── payment/      # 결제
-│   ├── report/       # PDF 리포트
-│   └── auth/         # 인증
-├── entities/         # 도메인 모델
-│   ├── analysis/
-│   └── payment/
-└── shared/           # 공유 유틸리티
-    ├── api/supabase/ # DB 클라이언트
-    └── lib/          # 인증, 에러, 레이트리밋
-```
+*FSD 6개 레이어 — 각 레이어는 하위 레이어만 임포트할 수 있다*
 
 FSD의 **단방향 임포트 규칙**(상위 레이어 → 하위 레이어만 가능)이 코드 의존성을 깔끔하게 유지해주었습니다. Claude Code에게 이 규칙을 CLAUDE.md에 명시해두니, 새 코드를 생성할 때 자동으로 규칙을 준수했습니다.
 
@@ -360,7 +344,8 @@ AI와 함께 개발하는 시대, 여러분도 한번 도전해보시는 건 어
 
 ## 참고
 
-- [Claude Code 공식 문서](https://docs.anthropic.com/en/docs/claude-code)
-- [Feature-Sliced Design](https://feature-sliced.design/)
-- [Next.js App Router](https://nextjs.org/docs/app)
-- [Supabase](https://supabase.com/)
+- [계약서 지킴이 GitHub](https://github.com/sgd122/contract-guardian) — 이 프로젝트의 소스 코드
+- [Claude Code 공식 문서](https://docs.anthropic.com/en/docs/claude-code) — AI 코딩 에이전트
+- [Feature-Sliced Design](https://feature-sliced.design/) — 프론트엔드 아키텍처 방법론
+- [Next.js App Router](https://nextjs.org/docs/app) — React 풀스택 프레임워크
+- [Supabase](https://supabase.com/) — 오픈소스 Firebase 대안
