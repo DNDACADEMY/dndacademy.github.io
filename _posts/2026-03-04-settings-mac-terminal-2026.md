@@ -119,7 +119,7 @@ echo "🤖 AI 코딩 도구 설치 중..."
 
 # Claude Code
 if ! command -v claude &>/dev/null; then
-  npm install -g @anthropic-ai/claude-code
+  curl -fsSL https://claude.ai/install.sh | bash
 fi
 
 # Codex CLI
@@ -550,11 +550,11 @@ node = "24.9.0"
 
 ![Claude Code AI 코딩 에이전트](/assets/images/settings-mac-terminal-2026/terminal-claude.png)
 
-[Claude Code](https://docs.anthropic.com/en/docs/claude-code)는 Anthropic의 공식 CLI 코딩 에이전트입니다.
+[Claude Code](https://code.claude.com/docs/ko/overview)는 Anthropic의 공식 CLI 코딩 에이전트입니다.
 
 ```bash
 # 설치
-npm install -g @anthropic-ai/claude-code
+curl -fsSL https://claude.ai/install.sh | bash
 
 # 실행
 claude
