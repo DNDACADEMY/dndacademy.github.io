@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">
+  <defs><style>
+    .bg{fill:#1e1e2e}.card{fill:#181825}.border{stroke:#45475a;stroke-width:1.5;fill:none}
+    .h{fill:#cdd6f4;font-size:15px;font-weight:700}.d{fill:#9399b2;font-size:12px}
+    .m{fill:#bac2de;font-size:12px}
+  </style></defs>
+  <rect class="bg" x="0" y="0" width="880" height="340" rx="10"/>
+  <text class="h" x="30" y="40" font-size="16">herdr agent 상태 (lifecycle)</text>
+
+  <!-- idle -->
+  <rect class="card" x="30" y="60" width="190" height="240"/><rect class="border" x="31" y="61" width="188" height="238"/>
+  <circle cx="55" cy="90" r="7" fill="#89b4fa"/><text class="h" x="72" y="95">idle</text>
+  <text class="m" x="46" y="130">입력을 받을 준비</text>
+  <text class="m" x="46" y="150">완료. 탭이 포커스</text>
+  <text class="m" x="46" y="170">UI에 노출된 적 있음</text>
+  <text class="d" x="46" y="210">→ 프롬프트 보내도</text>
+  <text class="d" x="46" y="226">   안전</text>
+
+  <!-- working -->
+  <rect class="card" x="240" y="60" width="190" height="240"/><rect class="border" x="241" y="61" width="188" height="238"/>
+  <circle cx="265" cy="90" r="7" fill="#a6e3a1"/><text class="h" x="282" y="95">working</text>
+  <text class="m" x="256" y="130">턴 진행 중</text>
+  <text class="m" x="256" y="150">⠹ 스피너 표시</text>
+  <text class="d" x="256" y="190">→ prompt --wait 는</text>
+  <text class="d" x="256" y="206">   현재 턴이 끝나면</text>
+  <text class="d" x="256" y="222">   반환될 수 있음</text>
+
+  <!-- blocked -->
+  <rect class="card" x="450" y="60" width="190" height="240"/><rect class="border" x="451" y="61" width="188" height="238"/>
+  <text x="456" y="96" font-size="15" fill="#f9e2af">▲</text><text class="h" x="482" y="95">blocked</text>
+  <text class="m" x="466" y="130">승인·질문 UI를</text>
+  <text class="m" x="466" y="150">herdr가 인식함</text>
+  <text class="d" x="466" y="190">→ prompt 는 거부됨</text>
+  <text class="d" x="466" y="206">   (agent_blocked)</text>
+  <text class="d" x="466" y="222">   사람이 응답해야 함</text>
+
+  <!-- done -->
+  <rect class="card" x="660" y="60" width="190" height="240"/><rect class="border" x="661" y="61" width="188" height="238"/>
+  <circle cx="685" cy="90" r="7" fill="#94e2d5"/><text class="h" x="702" y="95">done</text>
+  <text class="m" x="676" y="130">idle 와 같은 상태</text>
+  <text class="m" x="676" y="150">단, 백그라운드</text>
+  <text class="m" x="676" y="170">작업이 안 보인 채</text>
+  <text class="m" x="676" y="190">끝난 경우</text>
+  <text class="d" x="676" y="226">unknown = 분류 불가</text>
+</svg>

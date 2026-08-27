@@ -488,6 +488,32 @@ img:hover {
         margin-left: 2px;
         box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
     }
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        border-collapse: collapse;
+        margin: 30px 0;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    thead th {
+        background: #f6f6f6;
+        border-bottom: 2px solid #212529;
+        text-align: left;
+    }
+    th,
+    td {
+        padding: 10px 14px;
+        border-bottom: 1px solid #e5e5e5;
+        vertical-align: top;
+    }
+    tbody tr:nth-child(even) {
+        background: #fafafa;
+    }
+    tbody tr:last-child td {
+        border-bottom: 0;
+    }
 }
 
 .c-rating button {
