@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">
+  <defs><style>
+    .bg{fill:#1e1e2e}.mantle{fill:#181825}.crust{fill:#11111b}
+    .border{stroke:#45475a;stroke-width:1.5;fill:none}.focus{stroke:#cba6f7;stroke-width:2.5;fill:none}
+    .t{fill:#cdd6f4;font-size:12.5px}.d{fill:#9399b2;font-size:12px}
+    .dir{fill:#89b4fa;font-size:12.5px}.mod{fill:#f9e2af;font-size:12.5px}
+    .new{fill:#a6e3a1;font-size:12.5px}.unt{fill:#f38ba8;font-size:12.5px}
+    .add{fill:#a6e3a1;font-size:12px}.del{fill:#f38ba8;font-size:12px}
+    .hunk{fill:#89dceb;font-size:12px}
+  </style></defs>
+  <rect class="bg" x="0" y="0" width="880" height="480" rx="10"/>
+  <rect class="crust" x="20" y="20" width="600" height="28" rx="8"/>
+  <circle cx="40" cy="34" r="5" fill="#f38ba8"/><circle cx="58" cy="34" r="5" fill="#f9e2af"/><circle cx="76" cy="34" r="5" fill="#a6e3a1"/>
+  <text class="d" x="110" y="38">herdr-file-viewer  ·  prefix+f</text>
+
+  <!-- tree pane -->
+  <rect class="mantle" x="20" y="56" width="250" height="404"/>
+  <rect class="focus" x="21" y="57" width="248" height="402"/>
+  <text class="d" x="34" y="80">TREE  ·  git: 3 changed</text>
+  <text class="dir" x="34" y="108">▾ _posts/</text>
+  <text class="mod" x="48" y="128">M 2026-08-27-herdr….md</text>
+  <text class="dir" x="34" y="150">▾ assets/images/</text>
+  <text class="dir" x="48" y="170">▾ herdr-terminal-workspace/</text>
+  <text class="new" x="62" y="190">A herdr-anatomy.svg</text>
+  <text class="new" x="62" y="210">A herdr-review-layout.svg</text>
+  <text class="d" x="34" y="238">  _config.yml</text>
+  <text class="d" x="34" y="258">  Gemfile</text>
+  <text class="unt" x="34" y="278">?? serve.sh</text>
+  <text class="d" x="34" y="430">f 검색  ] 다음 변경  v 뷰 전환</text>
+
+  <!-- content pane -->
+  <rect class="mantle" x="270" y="56" width="590" height="404"/>
+  <rect class="border" x="271" y="57" width="588" height="402"/>
+  <text class="d" x="284" y="80">_posts/2026-08-27-herdr….md   ·   view: diff</text>
+  <text class="hunk" x="284" y="108">@@ -34,7 +34,9 @@ ## Herdr란?</text>
+  <text class="d"   x="284" y="128"> 34   tmux처럼 백그라운드 서버가 터미널을 소유하고,</text>
+  <text class="del" x="284" y="148">-37   맥이 잠들어도 계속 작업이 이어집니다.</text>
+  <text class="add" x="284" y="168">+37   detach·네트워크 단절에는 프로세스가 유지되지만,</text>
+  <text class="add" x="284" y="188">+38   호스트가 sleep 상태면 실행도 함께 멈춥니다.</text>
+  <text class="d"   x="284" y="208"> 39   서버 재시작 시에는 레이아웃만 복원됩니다.</text>
+  <text class="hunk" x="284" y="240">@@ -74,3 +76,3 @@ ## 기본 사용법</text>
+  <text class="del" x="284" y="260">-76   `prefix ?` 를 누르면 키바인딩이 표시됩니다.</text>
+  <text class="add" x="284" y="280">+76   `prefix+?` (Ctrl+B 를 놓은 뒤 ?) 로 표시됩니다.</text>
+  <text class="d" x="284" y="430">읽기 전용 · e 로 외부 에디터 · W 로 워크트리 전환</text>
+</svg>

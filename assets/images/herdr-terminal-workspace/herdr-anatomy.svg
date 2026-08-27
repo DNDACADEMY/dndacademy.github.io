@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">
+  <defs>
+    <style>
+      .bg{fill:#1e1e2e}.mantle{fill:#181825}.crust{fill:#11111b}
+      .surf{fill:#313244}.border{stroke:#45475a;stroke-width:1.5;fill:none}
+      .focus{stroke:#cba6f7;stroke-width:2.5;fill:none}
+      .t{fill:#cdd6f4;font-size:14px}.dim{fill:#9399b2;font-size:13px}
+      .lbl{fill:#f9e2af;font-size:13px;font-weight:700}
+      .grn{fill:#a6e3a1}.yel{fill:#f9e2af}.tl{fill:#94e2d5}.blu{fill:#89b4fa}
+      .callout{stroke:#f9e2af;stroke-width:1.2;fill:none;stroke-dasharray:4 3}
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="880" height="560" rx="10"/>
+
+  <!-- window chrome -->
+  <rect class="crust" x="20" y="20" width="600" height="30" rx="8"/>
+  <circle cx="40" cy="35" r="5" fill="#f38ba8"/><circle cx="58" cy="35" r="5" fill="#f9e2af"/><circle cx="76" cy="35" r="5" fill="#a6e3a1"/>
+  <text class="dim" x="110" y="40">herdr  ·  ~/projects/my-app</text>
+
+  <!-- tab bar -->
+  <rect class="mantle" x="20" y="50" width="600" height="28"/>
+  <rect class="surf" x="20" y="50" width="130" height="28"/>
+  <text class="t" x="34" y="69">t1: dev</text><circle cx="128" cy="64" r="4" class="grn"/>
+  <text class="dim" x="170" y="69">t2: tests</text>
+  <text class="dim" x="250" y="69">t3: docs</text>
+
+  <!-- body: panes -->
+  <!-- left pane (focused) -->
+  <rect class="mantle" x="20" y="78" width="300" height="360"/>
+  <rect class="focus" x="21" y="79" width="298" height="358"/>
+  <text class="dim" x="34" y="100">pane w1:p1</text>
+  <text class="grn" x="240" y="100">● working</text>
+  <text class="t" x="34" y="128">❯ claude</text>
+  <text class="dim" x="34" y="150">· Editing src/auth.rs …</text>
+  <text class="dim" x="34" y="170">· Running cargo test</text>
+  <text class="dim" x="34" y="190">⠹ thinking</text>
+
+  <!-- right column: two stacked panes -->
+  <rect class="mantle" x="320" y="78" width="300" height="180"/>
+  <rect class="border" x="321" y="79" width="298" height="178"/>
+  <text class="dim" x="334" y="100">pane w1:p2</text>
+  <text class="yel" x="230" y="100" transform="translate(90,0)"> </text>
+  <text class="yel" x="510" y="100">▲ blocked</text>
+  <text class="t" x="334" y="128">❯ codex</text>
+  <text class="dim" x="334" y="150">Allow command?</text>
+  <text class="dim" x="334" y="170">  rm -rf build/   [y/N]</text>
+
+  <rect class="mantle" x="320" y="258" width="300" height="180"/>
+  <rect class="border" x="321" y="259" width="298" height="178"/>
+  <text class="dim" x="334" y="280">pane w1:p3</text>
+  <text class="blu" x="520" y="280">idle</text>
+  <text class="t" x="334" y="308">❯ hx src/auth.rs</text>
+  <text class="dim" x="334" y="330">12 │ fn verify(token: &amp;str)</text>
+  <text class="dim" x="334" y="350">13 │   -&gt; Result&lt;Claims&gt; {</text>
+
+  <!-- status bar -->
+  <rect class="crust" x="20" y="438" width="600" height="24"/>
+  <text class="dim" x="34" y="454">ctrl+b  prefix    ·    prefix+?  keys    ·    click a pane to focus</text>
+
+  <!-- callouts -->
+  <path class="callout" d="M622 64 L720 64"/>
+  <text class="lbl" x="726" y="60">Tab</text>
+  <text class="dim" x="726" y="78" font-size="11">워크스페이스 안의</text>
+  <text class="dim" x="726" y="92" font-size="11">레이아웃 하나</text>
+
+  <path class="callout" d="M622 35 L720 35"/>
+  <text class="lbl" x="726" y="31">Workspace</text>
+  <text class="dim" x="726" y="46" font-size="11">프로젝트 단위 컨테이너</text>
+
+  <path class="callout" d="M622 168 L720 168"/>
+  <text class="lbl" x="726" y="150">Pane</text>
+  <text class="dim" x="726" y="166" font-size="11">실제 터미널.</text>
+  <text class="dim" x="726" y="180" font-size="11">오른쪽/아래로 분할</text>
+
+  <path class="callout" d="M572 96 L640 96 M760 96 L760 300 L622 348"/>
+  <text class="lbl" x="726" y="250">Agent 상태</text>
+  <text class="dim" x="726" y="266" font-size="11">working · blocked</text>
+  <text class="dim" x="726" y="280" font-size="11">idle · done · unknown</text>
+  <text class="dim" x="726" y="294" font-size="11">를 UI로 표시</text>
+
+  <path class="callout" d="M320 418 L748 418"/>
+  <text class="lbl" x="726" y="438">Focus 테두리</text>
+  <text class="dim" x="726" y="454" font-size="11">보라색 = 현재 패널</text>
+</svg>
