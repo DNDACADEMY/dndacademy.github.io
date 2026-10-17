@@ -11,8 +11,8 @@ sitemap:
 ---
 
 > 지난 글에서는 [Herdr로 AI 에이전트 터미널을 관리하는 방법](/herdr-terminal-workspace-for-ai-agents/)을 다뤘습니다.
-> 이번에는 **Orca에서 작업을 나누고, Tailscale로 원격 컴퓨터에 연결해 그 작업을 계속 통제하는 방법**을 정리합니다.
-> 집 컴퓨터에서 에이전트에게 작업을 맡기고, 밖에서는 노트북이나 휴대폰으로 진행 상황을 확인하는 구성을 만들어 봅니다.
+> 이번에는 **Orca에서 작업을 나누고 Tailscale로 원격 컴퓨터에 연결해 그 작업을 계속 통제하는 방법**을 정리합니다.
+> 집 컴퓨터에서 에이전트에게 작업을 맡기고 밖에서는 노트북이나 휴대폰으로 진행 상황을 확인하는 구성을 만들어 봅니다.
 
 이 글에서는 **집에 두고 작업을 실행할 컴퓨터를 ‘서버’**, **밖에서 접속할 노트북을 ‘클라이언트’**라고 부릅니다. 서버라고 해서 별도의 장비를 살 필요는 없습니다. 켜 두고 사용할 Mac이나 PC면 시작할 수 있습니다.
 
@@ -40,7 +40,7 @@ Herdr 글의 중심이 **터미널 패널과 에이전트 상태 관리**였다�
 
 이 글의 [Orca](https://www.onorca.dev/docs)는 Claude Code, Codex 같은 코딩 에이전트를 실행하고 결과를 검토하는 데스크톱 개발 도구입니다. 평소 쓰는 에이전트 계정과 컴퓨터를 연결해 사용합니다. [공식 소개](https://www.onorca.dev/docs)
 
-중심 개념은 **Git worktree(작업별 코드 폴더)**입니다. 하나의 저장소에서 서로 다른 브랜치를 별도 폴더로 열어, 각 작업에 파일과 터미널을 붙입니다. [Worktrees 문서](https://www.onorca.dev/docs/model/worktrees)
+중심 개념은 **Git worktree(작업별 코드 폴더)**입니다. 하나의 저장소에서 서로 다른 브랜치를 별도 폴더로 열어 각 작업에 파일과 터미널을 붙입니다. [Worktrees 문서](https://www.onorca.dev/docs/model/worktrees)
 
 | 단위 | 예시 | 실전에서의 의미 |
 | --- | --- | --- |
@@ -64,9 +64,9 @@ Herdr 글의 중심이 **터미널 패널과 에이전트 상태 관리**였다�
 | 집 Mac mini에서 빌드, 밖에서 노트북 사용 | 실행 위치를 유지하며 지시·검토 | 상시 가동과 서버 인증 관리 |
 | Linux 서버에서 무거운 테스트 | 노트북 자원 사용을 줄임 | 원격 환경 준비와 연결 지연 |
 | 여러 독립 작업 병행 | worktree마다 변경을 나눠 리뷰 | 의존성·DB·포트 격리 설계 |
-| 이동 중 에이전트 질문 확인 | 폰으로 대기 중인 흐름을 이어감 | 작은 화면에서의 검토 한계 |
+| 이동 중 에이전트 질문 확인 | 폰으로 대기 중인 흐름을 이어감 | 작은 화면에서 검토할 때의 한계 |
 
-에이전트 하나로 짧은 작업만 한다면 추가 런타임과 원격 연결의 관리 부담이 더 클 수 있습니다. 먼저 로컬에서 한 작업을 끝내 보고, 원격 실행이 실제로 필요한 작업부터 옮기는 순서를 제안합니다.
+에이전트 하나로 짧은 작업만 한다면 추가 런타임과 원격 연결의 관리 부담이 더 클 수 있습니다. 먼저 로컬에서 한 작업을 끝내 보고 원격 실행이 실제로 필요한 작업부터 옮겨 보세요.
 
 ## 1. 양쪽 컴퓨터에 Orca 준비하기
 
@@ -84,15 +84,15 @@ brew install --cask stablyai/orca/orca
 2. 저장소 옆 **+**에서 새 worktree를 만듭니다.
 3. 작업 이름과 시작 브랜치 또는 커밋을 확인합니다. 기본 브랜치에서 시작할지, 기존 작업 위에 쌓을지 구분합니다.
 4. Claude Code나 Codex 등 사용할 에이전트를 선택합니다.
-5. 요구사항과 검증 방법을 전달하고, 변경 내역과 테스트 출력을 확인합니다.
+5. 요구사항과 검증 방법을 전달하고 변경 내역과 테스트 출력을 확인합니다.
 
-이 흐름은 공식 [첫 세션 가이드](https://www.onorca.dev/docs/first-session)를 한 작업으로 줄인 것입니다. 처음부터 여러 에이전트를 띄울 필요는 없습니다. 먼저 에이전트 인증과 프로젝트 실행이 정상인지 확인하는 편이 문제를 찾기 쉽습니다.
+이 흐름은 공식 [첫 세션 가이드](https://www.onorca.dev/docs/first-session)를 한 작업으로 줄인 것입니다. 처음부터 여러 에이전트를 띄울 필요는 없습니다. 먼저 에이전트 인증과 프로젝트 실행이 정상인지 확인하면 문제를 찾기 쉽습니다.
 
 **여기까지 확인할 것:** 서버에서 프로젝트를 열고 에이전트에게 질문했을 때 정상적으로 답을 받을 수 있어야 합니다.
 
 ## 2. Tailscale로 두 기기 연결하기
 
-Tailscale은 기기들을 **tailnet이라는 사설 네트워크**로 연결합니다. 각 기기에는 사설 IP와 기기 이름으로 접속할 수 있는 MagicDNS가 제공됩니다. Tailscale로 연결 경로를 만들고, 그 경로 위에서 Orca에 접속합니다. [기기 연결 공식 가이드](https://tailscale.com/docs/how-to/connect-to-devices)
+Tailscale은 기기들을 **tailnet이라는 사설 네트워크**로 연결합니다. 각 기기에는 사설 IP와 기기 이름으로 접속할 수 있는 MagicDNS가 제공됩니다. Tailscale로 연결 경로를 만들고 그 경로 위에서 Orca에 접속합니다. [기기 연결 공식 가이드](https://tailscale.com/docs/how-to/connect-to-devices)
 
 ![Tailscale 연결, Orca 인증, 서버 프로세스의 역할을 나눈 그림](/assets/images/orca-remote-workspace/orca-access-layers.png)
 
@@ -113,7 +113,7 @@ tailscale ping dev-mac
 
 `ip -4`는 **명령을 실행한 기기 자신의 주소**를 보여줍니다. 노트북에서 실행한 값을 집 서버의 주소로 넣으면 안 됩니다. `ping` 성공도 Orca 인증 성공을 보장하지 않습니다. [Tailscale CLI](https://tailscale.com/docs/reference/tailscale-cli)
 
-**여기까지 확인할 것:** 양쪽 기기가 Tailscale에서 온라인으로 보이고, 노트북에서 서버의 주소를 확인할 수 있어야 합니다.
+**여기까지 확인할 것:** 양쪽 기기가 Tailscale에서 온라인으로 보이고 노트북에서 서버의 주소를 확인할 수 있어야 합니다.
 
 ## 3. 집 컴퓨터를 원격 Orca 서버로 공유하기
 
@@ -123,7 +123,7 @@ tailscale ping dev-mac
 
 ![Orca 원격 서버 설정 — 호스트에 연결, 이 호스트 공유, 클라우드 VM과 서버 연결 상태](/assets/images/orca-remote-workspace/orca-remote-server-settings.png)
 
-*원격 Orca 서버 설정 화면. 아래 한글 메뉴는 이 화면을 기준으로 설명하며, 공식 문서의 영문 이름을 함께 적었습니다.*
+*원격 Orca 서버 설정 화면. 아래 한글 메뉴는 이 화면을 기준으로 설명하며 공식 문서의 영문 이름을 함께 적었습니다.*
 
 | 화면의 탭 | 어느 기기에서 사용하는가 | 목적 |
 | --- | --- | --- |
@@ -131,7 +131,7 @@ tailscale ping dev-mac
 | **이 호스트 공유** | 작업을 계속 실행할 컴퓨터 | 이 컴퓨터를 다른 Orca 클라이언트가 접속할 서버로 공유 |
 | **클라우드 VM** | 레시피 기반 실행 환경을 관리할 때 | 레시피로 생성한 클라우드 머신 관리 |
 
-두 기기를 연결할 때는 **서버의 ‘이 호스트 공유’ → 노트북의 ‘호스트에 연결’** 순서로 진행합니다. 클라우드 VM은 별도 실행 방식이며, 이미 가진 Mac 두 대를 연결하기 위해 VM을 만들 필요는 없습니다. 클라우드 실행도 사용자가 준비한 컴퓨터·계정과 레시피를 이용합니다. [공식 실행 방식 비교](https://www.onorca.dev/docs/ways-to-run)
+두 기기를 연결할 때는 **서버의 ‘이 호스트 공유’ → 노트북의 ‘호스트에 연결’** 순서로 진행합니다. 클라우드 VM은 별도 실행 방식이며 이미 가진 Mac 두 대를 연결하기 위해 VM을 만들 필요는 없습니다. 클라우드 실행도 사용자가 준비한 컴퓨터·계정과 레시피를 이용합니다. [공식 실행 방식 비교](https://www.onorca.dev/docs/ways-to-run)
 
 ### 서버 공유와 클라이언트 등록
 
@@ -146,15 +146,15 @@ tailscale ping dev-mac
 
 ### 연결됨과 기본 실행 대상은 다릅니다
 
-서버 카드에 **연결됨**이 표시되면 해당 Orca와 연결된 것입니다. **호환됨**은 버전 호환 상태이며, 에이전트 로그인이나 프로젝트 실행까지 확인해 주는 표시는 아닙니다. 화면의 `v1.4.225 / 최신 상태`는 캡처 당시의 버전·업데이트 상태입니다.
+서버 카드에 **연결됨**이 표시되면 해당 Orca와 연결된 것입니다. **호환됨**은 버전 호환 상태이며 에이전트 로그인이나 프로젝트 실행까지 확인해 주는 표시는 아닙니다. 화면의 `v1.4.225 / 최신 상태`는 캡처 당시의 버전·업데이트 상태입니다.
 
 **서버 추가·연결만으로 모든 새 작업이 원격으로 전환되지는 않습니다.** 화면 아래 **고급 → 활성 서버**는 기본 호스트를 변경하려는 경우에 확인합니다. 개별 작업에서도 실행 호스트와 서버 쪽 프로젝트 경로를 확인하세요. 이 구분은 화면 안내와 [공식 Active Server 설명](https://www.onorca.dev/docs/remote-servers#2-add-the-server-on-your-laptop)에 모두 나옵니다.
 
 링크는 비밀번호처럼 취급합니다. 클라이언트별 권한은 서버의 공유 접근 권한 목록(**Shared Server Access**)에서 철회할 수 있습니다. 새 링크 생성만으로 기존 클라이언트 권한이 모두 취소되지는 않습니다.
 
-공식 문서는 Orca 포트의 인터넷 직접 노출을 피하도록 안내합니다. 접속하는 노트북이 잠들어도 원격 에이전트는 실행되지만, **서버는 깨어 있고 Orca가 실행 중이어야 합니다.** 도구와 인증도 서버에 준비해야 합니다. [접근·보안과 실행 조건](https://www.onorca.dev/docs/remote-servers#access-and-security)
+공식 문서는 Orca 포트의 인터넷 직접 노출을 피하도록 안내합니다. 접속하는 노트북이 잠들어도 원격 에이전트는 실행되지만 **서버는 깨어 있고 Orca가 실행 중이어야 합니다.** 도구와 인증도 서버에 준비해야 합니다. [접근·보안과 실행 조건](https://www.onorca.dev/docs/remote-servers#access-and-security)
 
-**여기까지 확인할 것:** 노트북의 서버 카드에 **연결됨**이 표시되고, 원격 서버의 프로젝트를 선택할 수 있어야 합니다.
+**여기까지 확인할 것:** 노트북의 서버 카드에 **연결됨**이 표시되고 원격 서버의 프로젝트를 선택할 수 있어야 합니다.
 
 ## 4. 연결한 서버에서 첫 작업 확인하기
 
@@ -162,7 +162,7 @@ tailscale ping dev-mac
 
 1. 노트북 Orca에서 **연결한 서버와 그 서버의 프로젝트**를 선택합니다. 이름이 같은 로컬 프로젝트와 혼동하지 않도록 실행 호스트를 확인합니다.
 2. 선택한 작업의 터미널에서 `pwd`를 실행합니다. 출력이 예상한 서버의 작업 폴더인지 확인합니다. 경로가 같을 수도 있으므로 경로만으로 호스트를 판별하지는 마세요.
-3. 새 변경 작업이라면 worktree를 만들고, 시작 브랜치와 실행 호스트를 확인한 뒤 에이전트를 선택합니다.
+3. 새 변경 작업이라면 worktree를 만들고 시작 브랜치와 실행 호스트를 확인한 뒤 에이전트를 선택합니다.
 4. 먼저 아래처럼 범위가 작은 요청을 보냅니다.
 
 ```text
@@ -172,13 +172,13 @@ tailscale ping dev-mac
 
 5. 응답에 나온 파일을 열어 내용이 맞는지 확인합니다. 이어서 코드를 수정한다면 변경 내역(diff)과 실제 테스트 결과까지 확인합니다.
 
-이제 노트북은 화면과 입력을 담당하고, 코드와 에이전트는 서버에서 실행되는 흐름입니다. 노트북의 연결이 끊겨도 서버가 깨어 있고 Orca가 실행 중이면 작업을 이어갈 수 있습니다. 서버 절전·재부팅은 별도로 관리해야 합니다. [원격 서버의 실행 위치와 조건](https://www.onorca.dev/docs/remote-servers)
+이제 노트북은 화면과 입력을 담당하고 코드와 에이전트는 서버에서 실행됩니다. 노트북의 연결이 끊겨도 서버가 깨어 있고 Orca가 실행 중이면 작업을 이어갈 수 있습니다. 서버 절전·재부팅은 별도로 관리해야 합니다. [원격 서버의 실행 위치와 조건](https://www.onorca.dev/docs/remote-servers)
 
 **기본 연결 과정은 여기까지입니다.** 휴대폰으로 확인하려면 다음 절로, 명령어로 작업을 제어하려면 CLI 절로 이동하세요.
 
 ## 선택: 휴대폰으로 작업 확인하기
 
-공식 Orca Mobile은 iOS/Android용 베타 보조 앱입니다. 에이전트 상태·출력을 읽고, 질문에 답하고, 소스 변경을 검토하는 등 짧은 후속 조작에 쓸 수 있습니다. 폰에서는 서버에서 실행 중인 작업에 접속합니다. [Mobile companion](https://www.onorca.dev/docs/mobile)
+공식 Orca Mobile은 iOS/Android용 베타 보조 앱입니다. 에이전트 상태·출력을 읽고 질문에 답하고 소스 변경을 검토하는 등 짧은 후속 조작에 쓸 수 있습니다. 폰에서는 서버에서 실행 중인 작업에 접속합니다. [Mobile companion](https://www.onorca.dev/docs/mobile)
 
 데스크톱의 계정·상태 메뉴에서 모바일 페어링을 시작하고 폰의 **Pair**로 연결합니다. 휴대폰에는 **모바일용 페어링 코드**를 사용합니다. 이 글의 Tailscale 구성을 사용한다면 폰에도 Tailscale을 연결해 서버에 도달할 수 있어야 합니다. **직접 연결용 페어링의 주소도 서버의 Tailscale 주소로 선택**합니다. 집 LAN 주소를 선택한 링크는 폰이 외부망으로 이동한 뒤 그대로 접속되지 않을 수 있습니다.
 
@@ -190,9 +190,9 @@ orca-ide serve --pairing-address 100.64.1.20 --mobile-pairing
 
 이는 **기존 서버와 함께 두 번째 서버를 띄우라는 명령이 아니라, 서버를 시작할 때 고르는 페어링 방식의 예시**입니다. 실제 접속 주소와 코드를 확인하세요.
 
-최신 모바일 문서에는 Orca Relay도 나옵니다. Relay와 tailnet 직접 연결은 같은 경로가 아니며, Relay에는 별도 로그인 조건이 있습니다. 이 글은 Tailscale로 서버에 직접 연결하는 구성을 설명합니다. 앱 지원·설치 링크는 [현재 모바일 문서](https://www.onorca.dev/docs/mobile#pairing)를 따릅니다.
+최신 모바일 문서에는 Orca Relay도 나옵니다. Relay와 tailnet 직접 연결은 같은 경로가 아니며 Relay에는 별도 로그인 조건이 있습니다. 이 글은 Tailscale로 서버에 직접 연결하는 구성을 설명합니다. 앱 지원·설치 링크는 [현재 모바일 문서](https://www.onorca.dev/docs/mobile#pairing)를 따릅니다.
 
-폰에서는 “테스트 결과 알려줘”, “이 diff의 위험만 정리해줘”처럼 짧게 확인하고, 넓은 코드 리뷰는 큰 화면에서 이어가는 흐름을 제안합니다. 승인 화면에서는 대상 명령과 경로를 읽고 응답합니다.
+폰에서는 “테스트 결과 알려줘”, “이 diff의 위험만 정리해줘”처럼 짧게 확인하고 넓은 코드 리뷰는 큰 화면에서 이어가 보세요. 승인 화면에서는 대상 명령과 경로를 읽고 응답합니다.
 
 ## 선택: CLI로 원격 Orca 통제하기
 
@@ -206,7 +206,7 @@ orca status --json
 orca skills get orca-cli --json
 ```
 
-마지막 명령은 설치 버전에 맞는 에이전트용 사용 지침입니다. 이 글에서도 읽어 확인했습니다. **Linux에서 앱 밖의 CLI 이름은 `orca-ide`**입니다. 그냥 `orca`가 GNOME 스크린 리더를 가리킬 수 있으므로 아래 macOS 명령을 그대로 복사하지 마세요. [설치 문서의 플랫폼 안내](https://www.onorca.dev/docs/install#linux)
+마지막 명령으로 설치 버전에 맞는 에이전트용 사용 지침을 확인합니다. 이 글에서도 읽어 확인했습니다. **Linux에서 앱 밖의 CLI 이름은 `orca-ide`**입니다. 그냥 `orca`가 GNOME 스크린 리더를 가리킬 수 있으므로 아래 macOS 명령을 그대로 복사하지 마세요. [설치 문서의 플랫폼 안내](https://www.onorca.dev/docs/install#linux)
 
 ### 1. 원격 환경 등록
 
@@ -224,7 +224,7 @@ orca host list --json
 orca status --environment home --json
 ```
 
-입력한 링크는 등록 명령 실행 중 프로세스 인자로 전달됩니다. 신뢰하는 개인 기기에서 수행하고, 링크가 담긴 출력·기록도 공개하지 마세요. 저장한 환경 이름 `home`을 이후 명령마다 지정하면 로컬 런타임과 혼동할 여지를 줄일 수 있습니다.
+입력한 링크는 등록 명령 실행 중 프로세스 인자로 전달됩니다. 신뢰하는 개인 기기에서 수행하고 링크가 담긴 출력·기록도 공개하지 마세요. 저장한 환경 이름 `home`을 이후 명령마다 지정하면 로컬 런타임과 혼동할 여지를 줄일 수 있습니다.
 
 ### 2. 서버 쪽 저장소와 작업 찾기
 
@@ -232,13 +232,13 @@ orca status --environment home --json
 orca repo list --environment home --json
 ```
 
-출력에서 원하는 저장소의 `id`를 찾습니다. 다음 예시는 **어떤 값을 다음 명령으로 옮기는지 설명하기 위해 항목의 일부만 적은 가상 데이터**입니다. 실제 응답 전체의 형식을 뜻하지 않습니다.
+출력에서 원하는 저장소의 `id`를 찾습니다. 다음은 **항목의 일부만 적은 가상 데이터**입니다. 어떤 값을 다음 명령으로 옮길지 설명하는 예시이며 실제 응답 전체의 형식을 뜻하지 않습니다.
 
 ```json
 {"id": "repo-example"}
 ```
 
-이 값을 얻었다면 아래의 `id:REPO_ID`를 `id:repo-example`로 바꿉니다. `worktree list`에서는 사용할 작업의 서버 경로를 확인하고, `terminal list`에서는 터미널 식별자(handle)를 확인합니다. 경로와 `TERMINAL_HANDLE`도 실제 출력에 나온 값으로 교체합니다.
+이 값을 얻었다면 아래의 `id:REPO_ID`를 `id:repo-example`로 바꿉니다. `worktree list`에서는 사용할 작업의 서버 경로를 확인하고 `terminal list`에서는 터미널 식별자(handle)를 확인합니다. 경로와 `TERMINAL_HANDLE`도 실제 출력에 나온 값으로 교체합니다.
 
 ```bash
 orca worktree list --repo 'id:REPO_ID' --environment home --json
@@ -271,13 +271,13 @@ orca terminal send --terminal 'TERMINAL_HANDLE' \
 orca terminal read --terminal 'TERMINAL_HANDLE' --environment home --json
 ```
 
-전송 결과에는 `input_accepted`와 `turn_started`가 구분되어 표시될 수 있습니다. 전자는 입력 수락, 후자는 턴 시작을 관찰했다는 뜻이며 **작업 성공의 증거는 아닙니다.** 응답이 늦다고 같은 프롬프트를 다시 보내지 않습니다. 통신 결과가 모호하면 반환된 전송 요청 ID와 `--retry-request` 지침을 확인합니다. 서버 재시작으로 터미널 식별자가 무효화되면 `terminal list`에서 다시 얻습니다.
+전송 결과에는 `input_accepted`와 `turn_started`가 구분되어 표시될 수 있습니다. 전자는 입력 수락, 후자는 턴 시작을 관찰했다는 뜻입니다. **작업 성공의 증거는 아닙니다.** 응답이 늦다고 같은 프롬프트를 다시 보내지 않습니다. 통신 결과가 모호하면 반환된 전송 요청 ID와 `--retry-request` 지침을 확인합니다. 서버 재시작으로 터미널 식별자가 무효화되면 `terminal list`에서 다시 얻습니다.
 
 완료 판단은 테스트 결과·종료 코드·diff로 합니다. 에이전트의 “끝났다”는 답이나 idle 상태만으로 배포 준비가 끝났다고 보지 않습니다.
 
 ### 4. 원격에서 새 작업 시작하기
 
-새 작업 폴더가 필요할 때의 예시입니다. 서버에 Codex가 설치·인증되어 있고, 저장소와 프로젝트 초기 설정 스크립트가 준비되어 있어야 합니다.
+새 작업 폴더가 필요할 때의 예시입니다. 서버에 Codex가 설치·인증되어 있고 저장소와 프로젝트 초기 설정 스크립트가 준비되어 있어야 합니다.
 
 ```bash
 orca worktree create --repo 'id:REPO_ID' --name investigate-login \
@@ -286,7 +286,7 @@ orca worktree create --repo 'id:REPO_ID' --name investigate-login \
   --environment home --json
 ```
 
-`--no-parent`는 Orca의 부모 작업 관계를 지정하지 않는 옵션이며, Git 시작 브랜치를 정하는 옵션은 아닙니다. 별도의 시작 브랜치나 커밋을 지정하지 않으면 저장소의 기본 시작 브랜치를 확인해야 합니다.
+`--no-parent`는 Orca의 부모 작업 관계를 지정하지 않는 옵션이며 Git 시작 브랜치를 정하는 옵션은 아닙니다. 별도의 시작 브랜치나 커밋을 지정하지 않으면 저장소의 기본 시작 브랜치를 확인해야 합니다.
 
 `--agent`로 이미 시작한 에이전트를 `terminal create`로 중복 실행하지 않습니다. 같은 작업 폴더에서 새 터미널만 필요한 경우와 새 worktree가 필요한 경우도 구분하세요. [CLI의 작업·터미널 명령](https://www.onorca.dev/docs/cli/reference)
 
@@ -356,7 +356,7 @@ macOS CLI에서는 실행 파일 이름을 `orca`로 바꿉니다. `6768`은 여
 
 따라서 “Tailscale 주소를 적었으니 다른 인터페이스에서는 접근할 수 없다”고 판단하지 마세요. 호스트 방화벽과 tailnet 정책을 별도로 확인합니다.
 
-최신 [CLI reference](https://www.onorca.dev/docs/cli/reference#runtime-commands)에는 서비스 설치·상태 확인 명령도 나옵니다. 다만 **이 글에서 확인한 1.4.224의 `serve --help`에는 그 하위 명령이 없습니다.** 최신 문서를 그대로 붙여넣기보다 설치 버전의 도움말을 우선하고, 장기 운영은 해당 버전의 서비스 지원을 확인한 뒤 구성하세요.
+최신 [CLI reference](https://www.onorca.dev/docs/cli/reference#runtime-commands)에는 서비스 설치·상태 확인 명령도 나옵니다. 다만 **이 글에서 확인한 1.4.224의 `serve --help`에는 그 하위 명령이 없습니다.** 최신 문서를 그대로 붙여넣기보다 설치 버전의 도움말을 우선하고 장기 운영은 해당 버전의 서비스 지원을 확인한 뒤 구성하세요.
 
 ## 문제 해결과 운영 기준
 
@@ -373,15 +373,15 @@ macOS CLI에서는 실행 파일 이름을 `orca`로 바꿉니다. `6768`은 여
 
 네트워크와 서비스의 확인 순서는 [Tailscale 기기 연결 가이드](https://tailscale.com/docs/how-to/connect-to-devices#troubleshooting)를 참고하세요. 프로토콜 불일치는 Orca 양쪽 버전을 확인합니다.
 
-접근 제어는 두 겹입니다. Tailscale 정책으로 **접근 가능한 기기와 포트**를 좁히고, Orca에서 **페어링한 클라이언트 권한**을 관리합니다. tailnet에 들어왔다고 모든 서비스에 접근해야 할 이유는 없습니다. Tailscale은 새 정책 작성에 grants(접근 허용 규칙) 사용을 안내합니다. 기존 정책 전체를 예제 하나로 덮어쓰지 말고, 현재 사용자·기기·태그에 맞게 필요한 접근을 설정합니다. **grants는 허용 규칙의 합집합**이므로 좁은 규칙을 추가해도 기존의 넓은 허용이 남아 있으면 접근이 제한되지 않습니다. [Grants](https://tailscale.com/docs/features/access-control/grants), [규칙 합성 방식](https://tailscale.com/docs/reference/syntax/grants)
+접근 제어는 두 겹입니다. Tailscale 정책으로 **접근 가능한 기기와 포트**를 좁히고 Orca에서 **페어링한 클라이언트 권한**을 관리합니다. tailnet에 들어왔다고 모든 서비스에 접근해야 할 이유는 없습니다. Tailscale은 새 정책 작성에 grants(접근 허용 규칙) 사용을 안내합니다. 기존 정책 전체를 예제 하나로 덮어쓰지 말고 현재 사용자·기기·태그에 맞게 필요한 접근을 설정합니다. **grants는 허용 규칙의 합집합**이므로 좁은 규칙을 추가해도 기존의 넓은 허용이 남아 있으면 접근이 제한되지 않습니다. [Grants](https://tailscale.com/docs/features/access-control/grants), [규칙 합성 방식](https://tailscale.com/docs/reference/syntax/grants)
 
 **Tailscale Serve와 Funnel도 구분해야 합니다.** Serve는 tailnet 내 공유, Funnel은 공개 인터넷 노출 용도입니다. 이번 구성은 양쪽 Tailscale 연결을 사용하므로 Funnel을 켤 필요가 없습니다. [Serve](https://tailscale.com/docs/features/tailscale-serve), [Funnel](https://tailscale.com/docs/features/tailscale-funnel)
 
-“연결이 끊김”, “앱이 재시작됨”, “서버가 재부팅됨”도 같은 사건이 아닙니다. Orca의 [Session restore](https://www.onorca.dev/docs/model/session-restore)는 작업 화면과 복구 흐름을 설명합니다. **UI 복원이나 대화 재개를 중단 없는 프로세스 실행과 혼동하지 마세요.** 장시간 작업이라면 산출물과 진행 상황을 파일로 남기고, 서버 재시작 후 실제 프로세스·테스트 상태를 다시 확인하는 운영이 필요합니다.
+“연결이 끊김”, “앱이 재시작됨”, “서버가 재부팅됨”도 같은 사건이 아닙니다. Orca의 [Session restore](https://www.onorca.dev/docs/model/session-restore)는 작업 화면과 복구 흐름을 설명합니다. **UI 복원이나 대화 재개를 중단 없는 프로세스 실행과 혼동하지 마세요.** 장시간 작업이라면 산출물과 진행 상황을 파일로 남기고 서버 재시작 후 실제 프로세스·테스트 상태를 다시 확인해야 합니다.
 
 ### 연결은 되는데 느리다면
 
-Tailscale은 가능한 경우 기기끼리 직접 연결하고, 환경에 따라 DERP 등 릴레이 경로를 사용합니다. 릴레이 연결이라고 반드시 장애인 것은 아니지만 지연·성능은 달라질 수 있습니다. [연결 유형](https://tailscale.com/docs/reference/connection-types)
+Tailscale은 가능한 경우 기기끼리 직접 연결하고 환경에 따라 DERP 등 릴레이 경로를 사용합니다. 릴레이 연결이라고 반드시 장애인 것은 아니지만 지연·성능은 달라질 수 있습니다. [연결 유형](https://tailscale.com/docs/reference/connection-types)
 
 ## 공식 참고 자료
 
